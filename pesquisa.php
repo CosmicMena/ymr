@@ -70,8 +70,6 @@
     <header>
         <?php
             include('assets/nav.php');
-            //SEGUNDA NAV com barra de pesquisa
-            include('assets/nav2.php');
         ?>
     </header>
     <main>  
