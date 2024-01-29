@@ -74,8 +74,6 @@
                     <div class="produtos-body">
                     <?php
                         include('assets/produtos-section.php');
-                        //SEGUNDA NAV com barra de pesquisa
-                        include('assets/nav2.php');
                     ?>
                     </div>
                 </div>
