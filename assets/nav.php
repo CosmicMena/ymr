@@ -16,10 +16,10 @@
         <img src="images/LOGO.png" alt="YMR Logo">
     </a>
     <ul class="large-screen-nav">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Por que nos escolher?</a></li>
-        <li><a href="#">Sobre nós</a></li>
-        <li><a href="#">Contacte-nos</a></li>
+        <li><a href="home.php" class="active">Home</a></li>
+        <li><a href="sobre-nos.php">Sobre nós</a></li>
+        <li><a href="contacte-nos.php">Contacte-nos</a></li>
+        <li><a href="contacte-nos.php">Minha Conta</a></li>
         <li><span>|</span></li>
         <?php
             require_once('config.php');

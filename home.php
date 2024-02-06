@@ -32,20 +32,8 @@
         ?>
     </header>
     <main>
-        <div class="hero">
-            <div class="hero-text">
-                <h1>A Melhor Qualidade</h1>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur
-                </p>
-
-                
-            </div>
-            <div class="hero-img">
-                <img src="images/hero1.png" alt="">
-            </div>
-            
-        </div>
+        <!--====== HERO SECTION =========-->
+        <?php include('assets/hero-section.php'); ?>
         <section class="main-body">
             <div class="main-sections">
                 <?php
