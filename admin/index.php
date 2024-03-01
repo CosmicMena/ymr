@@ -1,3 +1,14 @@
+<?php
+    if (isset($_POST['acederadminarea'])) {
+        $userrule = $_POST['rule'];
+        if ($userrule != 2) {
+            header("location: ../");
+        }
+    } else {
+        header("location: ../");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -137,7 +148,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <img src="images/profile-1.jpg">
+                                        <img src="images/user.png">
                                         <p>John Doe</p>
                                     </td>
                                     <td>14-08-2023</td>
@@ -145,7 +156,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="images/profile-1.jpg">
+                                        <img src="images/user.png">
                                         <p>John Doe</p>
                                     </td>
                                     <td>14-08-2023</td>
@@ -153,7 +164,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="images/profile-1.jpg">
+                                        <img src="images/user.png">
                                         <p>John Doe</p>
                                     </td>
                                     <td>14-08-2023</td>
@@ -245,43 +256,9 @@
                         </div>
                         
                     </div>
-                    <table class="tabela">
-                        <thead>
-                            <tr>
-                                <th>Usuário</th>
-                                <th>Email</th>
-                                <th>Data</th>
-                                <th>Mensagem</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="img-perfil">
-                                        <img src="images/profile-1.jpg">
-                                        <p>John Doe</p>
-                                    </div>
-                                </td>
-                                <td><p>jonhdoe24@gmail.com</p></td>
-                                <td><p>14-08-2023</p></td>
-                                <td class="message-td"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum iste magni vel aspernatur fuga eos ad quam ut dolores doloribus, rerum earum! Et iusto similique non, dolorem praesentium eum repellendus.</p></td>
-                                <td><span class="status completed">Respondido</span></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="img-perfil">
-                                        <img src="images/profile-1.jpg">
-                                        <p>John Doe</p>
-                                    </div>
-                                </td>
-                                <td><p>jonhdoe24@gmail.com</p></td>
-                                <td><p>14-08-2023</p></td>
-                                <td class="message-td"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum iste magni vel aspernatur fuga</p></td>
-                                <td><span class="status pending">Pendente</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <?php
+                        include("assets/messages.php");
+                    ?>
                 </div>
             </section>
 
@@ -325,7 +302,7 @@
                             <tr>
                                 <td>
                                     <div class="img-perfil">
-                                        <img src="images/profile-1.jpg">
+                                        <img src="images/user.png">
                                         <p>John Doe</p>
                                     </div>
                                 </td>
@@ -338,7 +315,7 @@
                             <tr>
                                 <td>
                                     <div class="img-perfil">
-                                        <img src="images/profile-1.jpg">
+                                        <img src="images/user.png">
                                         <p>John Doe</p>
                                     </div>
                                 </td>
@@ -351,7 +328,7 @@
                             <tr>
                                 <td>
                                     <div class="img-perfil">
-                                        <img src="images/profile-1.jpg">
+                                        <img src="images/user.png">
                                         <p>John Doe</p>
                                     </div>
                                 </td>
@@ -393,46 +370,9 @@
                         </div>
                         
                     </div>
-                    <table class="tabela">
-                        <thead>
-                            <tr>
-                                <th>Usuário</th>
-                                <th>Id User</th>
-                                <th>E-mail</th>
-                                <th>Criação da conta</th>
-                                <th>Último acesso</th>
-                                <th>Ecomendas Confirmadas</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="img-perfil">
-                                        <img src="images/profile-1.jpg">
-                                        <p>John Doe</p>
-                                    </div>
-                                </td>
-                                <td>12</td>
-                                <td>jonhdoe24@gmail.com</td>
-                                <td>14-08-2023</td>
-                                <td>20-01-2024</td>
-                                <td>3 - (18500 kz)</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="img-perfil">
-                                        <img src="images/profile-1.jpg">
-                                        <p>Eduardo Mena</p>
-                                    </div>
-                                </td>
-                                <td>19</td>
-                                <td>eduardo,baptista2005@gmail.com</td>
-                                <td>14-01-2024</td>
-                                <td>02-02-2024</td>
-                                <td>28 - (295000 kz)</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <?php
+                        include("assets/users.php");
+                    ?>
                 </div>
             </section>
 

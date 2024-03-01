@@ -8,7 +8,11 @@
                 <li><a href="#">categorias</a></li>
                 <li><a href="#">Sobre Nós</a></li>
                 <li><a href="#">Fale com a Gente</a></li>
-                <li><a href="#">Minha conta</a></li>
+                <?php
+                    if (isset($_SESSION['username'])) {
+                        echo '<li><a href="login.php">Minha conta</a></li>';
+                    }
+                ?>
                 <li><a href="#">Onde nos encontrar</a></li>
                 <li><a href="#">Carrinho</a></li>
             </ul>
@@ -20,8 +24,28 @@
                 <li><a href="#">Meu Carrinho</a></li>
                 <li><a href="#">Acompanhe o seu pedido</a></li>
                 <li><a href="#">Suporte de usuário</a></li>
-                <li><a href="#">Minha conta</a></li>
-                <li><a href="#">Informações de usuário</a></li>
+                <?php
+                    if (isset($_SESSION['username'])) {
+                        echo '<li><a href="login.php">Minha conta</a></li>';
+                        echo '<li><a href="#">Informações de usuário</a></li>';
+                        
+                        $userrule = ($_SESSION['id_rule']);
+                        if ($userrule == 2) {
+                            echo '<form action="admin/index.php" method="post">
+                                    <li><a><label for="botaooculto">Tela Admin</label></a></li>
+                                    <input type="hidden" value="'. $userrule .'" name="rule">
+                                    <input type="submit" name="acederadminarea" class="botaooculto" id="botaooculto"></input>
+                                </form>
+                                <style>
+                                    .botaooculto {
+                                        background: transparent;
+                                        color: transparent;
+                                        width: 0;
+                                    }
+                                </style>';
+                        }
+                    }
+                ?>
             </ul>
         </div>
         <div class="links">

@@ -1,4 +1,10 @@
+
+
 <?php
+session_start();
+
+include("config.php");
+
 
     if (isset($_GET['categoria'])) {
         $categoriaSelecionada = urldecode($_GET['categoria']);
@@ -9,10 +15,12 @@
 
     require_once('config.php');
 
-    if (isset($_GET['idProduto']) && isset($_GET['quantidade'])) {
+    if (isset($_GET['categoria']) && isset($_GET['idProduto']) && isset($_GET['quantidade'])) {
         $idProduto = $_GET['idProduto'];
         $quantidade = $_GET['quantidade'];
-    
+
+        $categoriaSelecionada = urldecode($_GET['categoria']);
+
         $sql_product = "SELECT tb_produtos.*, tb_categ.category_name
                         FROM tb_produtos
                         INNER JOIN tb_categ ON tb_produtos.id_categories = tb_categ.id_categories
@@ -132,11 +140,11 @@
     <!--Script do Java Script-->
     
 <script>
-    function adicionarAoCarrinho(idProduto) {
+    function adicionarAoCarrinho(idProduto, userid) {
         var quantidade = document.getElementById("quantidadeInput").value;
 
-        var url = "php/add-carrinho.php?idProduto=" + idProduto + "&quantidade=" + quantidade;
-
+        var url = "php/add-carrinho.php?idProduto=" + idProduto + "&quantidade=" + quantidade + "&userid=" + userid;
+ 
         window.location.href = url;
     }
 </script>

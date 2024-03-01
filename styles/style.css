@@ -1588,6 +1588,376 @@ table .img-td img {
  /*===============================================================*/
  /*===============================================================*/
  /*===============================================================*/
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-gray4);
+}
+
+.message-sec{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(253, 253, 253, 0.05);
+}
+
+.message-sec .message{
+    width: 20rem;
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: var(--color-white);
+    color: var(--color-gray2);
+    font-size: 16px;
+    z-index: 100;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.message-sec .message a {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--color-primary);
+    font-size: 13px;
+    border: 1px solid var(--color-primary);
+}
+
+.login-container{
+    width: 60rem;
+    min-height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-gray2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login-page .login-container>div{
+    width: 50%;
+    min-width: 25rem;
+    height: 35rem;
+    text-align: center;
+}
+
+.login-page .login-container .right-login-container{
+    background: linear-gradient(120deg, rgb(17, 59, 228), var(--color-secundary),  var(--color-secundary));
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-page .login-container .right-login-container h1{
+    font-size: 2.5em;
+    font-weight: 700;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.login-page .login-container .right-login-container h1::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background: var(--color-primary);
+    border-radius: 20px;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+
+.login-page .login-container .left-login-container{
+    background-color: var(--color-white);
+    padding: 3rem;
+}
+
+.login-page .login-container .left-login-container h2{
+    font-size: 2em;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.login-page .login-container .left-login-container span{
+    font-size: 13px;
+    padding-top: 10px;
+    display: inline-block;
+    color: var(--color-gray2);
+}
+
+.login-page .login-container .left-login-container span.a-span{
+    padding-top: 0;
+    width: 100%;
+    text-align: right;
+}
+
+.login-page .login-container .left-login-container span a{
+    text-decoration: underline;
+    color: var(--color-gray3);
+}
+
+.login-page .login-container .left-login-container .social-midia-sec{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-page .login-container .left-login-container .social-midia-sec a{
+    padding: 5px;
+    width: 7rem;
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.login-page .login-container .left-login-container form .input-wrap 
+{
+    position: relative;
+    margin: 22px 0;
+}
+
+.login-page .login-container .left-login-container form .input-wrap .input-login
+{
+    width: 100%;
+    background: var(--color-gray6);
+    border: 1px solid var(--color-neutral-2);
+    padding: 1.5rem 1.35rem calc(0.75rem - 2px) 1.35rem;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.login-page .login-container .left-login-container form .input-wrap .input-login:focus
+{
+    border: 1px solid var(--color-primary);
+    transition: 0.2s;
+}
+
+.login-page .login-container .left-login-container form .input-wrap label
+{
+    position: absolute;
+    top: 50%;
+    left: calc(1.35rem + 2px);
+    transform: translateY(-50%);
+    font-size: 14px;
+    transition: 0.5s;
+    color: var(--color-text);
+}
+
+.login-page .login-container .left-login-container form .input-wrap .input-login:focus ~ label,
+.login-page .login-container .left-login-container form .input-wrap .input-login:valid ~ label
+{
+    top: 27%;
+    font-size: 11px;
+    transition: 0.5s;
+    color: var(--color-primary);
+}
+
+.login-page .login-container .left-login-container form .input-wrap .icon
+{
+    position: absolute;
+    top: 50%;
+    right: calc(1.35rem + 2px);
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.login-page .login-container .left-login-container form .input-wrap .input-login:focus ~ .icon
+{
+    transition: 0.5s;
+    color: var(--color-primary);
+}
+
+.login-page .login-container .left-login-container form .input-wrap .ic3
+{
+    width: 100%;
+    resize: none;
+    padding-bottom: 140px;
+}
+
+
+.login-page .login-container .left-login-container form .input-wrap .ic3:focus ~ label,
+.login-page .login-container .left-login-container form .input-wrap .ic3:valid ~ label
+{
+    top: 0.7rem;
+}
+
+.login-page .login-container .left-login-container form .input-wrap .ic3 ~ label
+{
+    top: 1.5rem;
+    transform: none;
+}
+
+.login-page .login-container .left-login-container form .input-wrap .ic3 ~ .icon
+{
+    top: 1.5rem;
+    transform: none;
+}
+
+.login-page .login-container .left-login-container a:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: var(--color-neutral-2);
+    color: var(--color-primary);
+}
+
+.login-page .login-container .left-login-container form .input-wrap-enviar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.login-page .login-container .left-login-container form .input-wrap-enviar .more{
+    position: relative;
+    background: white;
+    color: var(--color-primary);
+    bottom: 0;
+    text-align: center;
+    width: 130px;
+}
+
+.login-page .login-container .left-login-container form .input-wrap-enviar input{
+    padding: 10px;
+    border-radius: 3px;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    width: 200px;
+    margin-right: 20px;
+    outline: none;
+    border: 1px solid var(--color-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.login-page .login-container .left-login-container form .input-wrap-enviar input:hover{
+    color: var(--color-primary);
+    background-color: var(--color-neutral-2);
+    transition: 0.5s;
+}
+
+body main .contact_s .content .mais{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+
+body main .contact_s .content .mais .newsletter{
+    border-radius: 20px;
+    background: var(--color-primary);
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+body main .contact_s .content .mais .newsletter h4{
+    color: var(--color-neutral-2);
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+body main .contact_s .content .mais .newsletter p{
+    color: var(--color-neutral-2);
+    font-size: 13px;
+}
+
+body main .contact_s .content .mais .newsletter input{
+    padding: 10px;
+    color: var(--color-text);
+    font-size: 13px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 130px;
+    transition: 0.4s;
+}
+
+body main .contact_s .content .mais .newsletter input:focus{
+    width: 210px;
+    transition: 0.4s;
+}
+
+body main .contact_s .content .mais .newsletter i{
+    padding: 10px 12px;
+    font-size: 13px;
+    border-radius: 20px;
+    border: 1px solid var(--color-neutral-2);
+    transition: 0.5s;
+    color: var(--color-neutral-2);
+    background: var(--color-primary);
+}
+
+body main .contact_s .content .mais .newsletter i:hover{
+    color: var(--color-primary);
+    background: white;
+    transition: 0.5s;
+}
+
+body main .contact_s .content .mais .localizacao{
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--color-neutral-2);
+}
+
+body main .contact_s .content .mais .localizacao h4{
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 1.2em;
+    padding-bottom: 10px;
+}
+
+body main .contact_s .content .mais .localizacao .contact-icons{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+body main .contact_s .content .mais .localizacao .contact-icons a{
+    text-decoration: none;
+    color: var(--color-gray5);
+    background: var(--color-primary);
+    border-radius: 20px;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    border: 1px solid var(--color-primary);
+    transition: 0.5s;
+}
+
+body main .contact_s .content .mais .localizacao .contact-icons a:hover{
+    color: var(--color-primary);
+    background: var(--color-neutral-2);
+    transition: 0.5s;
+}
+/*------------------------- contact us ---------------------------*/
+/*------------------------- contact us ---------------------------*/
+
+
+
+
+ /*===============================================================*/
+ /*===============================================================*/
+ /*===============================================================*/
+ /*===============================================================*/
 
 
 

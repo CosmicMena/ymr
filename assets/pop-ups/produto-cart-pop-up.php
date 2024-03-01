@@ -28,7 +28,7 @@
                             </td>
                             <td><p><?php echo $quantidade;?></p></td>
                             <td><p><?php echo $produto_preco;?></p></td>
-                            <td><p><?php echo $quantidade * $produto_preco;?></p></td>
+                            <td><p><?php echo (int)$quantidade * (int)$produto_preco;?></p></td>
                         </tr>
                     </tbody>
                 </table>
@@ -37,7 +37,7 @@
             <?php
                 require_once('config.php');
 
-                $sql_count = "SELECT COUNT(*) AS total_registros FROM tb_carrinho";
+                $sql_count = "SELECT COUNT(*) AS total_registros FROM tb_carrinho where id_user = '$userId'";
                 $result = $conn->query($sql_count);
 
                 if ($result) {

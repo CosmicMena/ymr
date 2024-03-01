@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+include("config.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,6 +77,7 @@
     <?php
         //FOOTER 
         include('assets/footer.php');
+        // Adicionar o botão de tela de admin no footer, caso usuário tenha ermissão de admin
     ?>
 </body>
 </html>

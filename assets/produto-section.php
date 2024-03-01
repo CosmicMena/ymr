@@ -30,8 +30,15 @@
                         </p>
                     </div>
                     <div class="action">
-                        <p class="quantidade">QTD: <input type="number" name="" id="quantidadeInput" value="10"></p>
-                        <a class="btn" <?php echo 'onClick="adicionarAoCarrinho1(' . $id_produto . ')"';?>>Add ao carrinho</a>
+                        <p class="quantidade">QTD: <input type="number" name="" id="quantidadeInput" value="1"></p>
+                        <?php    
+                            if (isset($_SESSION['username'])) {
+                                $userid = ($_SESSION['id']);
+                                echo '<a class="btn" onClick="adicionarAoCarrinho1(' . $id_produto .','. $userid .')">Add ao carrinho</a>';
+                            } else {
+                                echo '<a class="btn" href="login.php">Add ao carrinho</a>';
+                            }
+                        ?>
                     </div>
                 </div>
             </div>

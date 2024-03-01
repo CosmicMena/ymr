@@ -21,9 +21,8 @@
                 <li><a href="#" class="active">Stock</a></li>
             </ul>
         </div>
-        <a href="#" class="report">
-            <i class='bx bx-cloud-download'></i>
-            <span>Adicionar Produto</span>
+        <a href="cad-produto.php" class="report">
+            <span>+ Adicionar Produto</span>
         </a>
     </div>
     <div class="content-table">

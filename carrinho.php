@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+include("config.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,9 +36,13 @@
     </header>
     <main>
         <?php
-            require_once('config.php');
 
-            $sql_cart = "SELECT * FROM tb_carrinho";
+            if (isset($_SESSION['username'])) {
+                $userId = ($_SESSION['id']);
+                $sql_cart = "SELECT * FROM tb_carrinho where id_user = '$userId'";
+            } else {
+                header("location: home.php");
+            }
 
             $result_cart = $conn->query($sql_cart);
 

@@ -1,27 +1,75 @@
 <div class="contact_s">
     <div class="content">
+        <?php
+            include("config.php");
+            if (isset($_POST['enviar_message'])) {
+                $name = $_POST['username'];
+                $email = $_POST['email'];
+                $mensagem = $_POST['message'];
+                $data = date('Y-m-d');
+
+                $sqlInsert = "INSERT INTO messages (username,email,data_message,mensagem) values('$name','$email','$data','$mensagem')";
+
+                $result = mysqli_query($conn, $sqlInsert);
+
+                if ($result) {
+
+                    echo "<style>
+                    .message-sec{
+                        display: flex;
+                    }
+                    </style>
+                    <div class='message-sec'>
+                        <div class='message'>
+                            <p>
+                                Mensagem Enviada Com Sucesso! <br>
+                                Obrigado Pelo Feedback Sr(a) ". $name ."!
+                            </p>
+                            <br>
+                            <a href='home.php'>
+                                Continuar
+                            </a>
+                        </div>
+                    </div>";
+
+                }
+            }
+        ?>
         <div class="texto">
             <h3>Deixe uma mensagem</h3>
-            <p>Deixe o seu feedback sobre a lavandaria</p>
-            <form action="home.html" method="post">
+            <p>Estamos aqui para o atender</p>
+            <form action="home.php" method="post">
                 <div class="input-wrap">
-                    <input type="text" name="nome" id="nome" autocomplete="off" required class="input-contact">
+                    <input type="text" name="username" id="nome" autocomplete="off" required class="input-contact" value="
+                        <?php
+                            if (isset($_SESSION['username'])) {
+                                $usernamelogado = trim(($_SESSION['username']));
+                                echo $usernamelogado;
+                            }
+                        ?>
+                    ">
                     <label for="nome">Digite o seu nome</label>
                     <i class="icon fas fa-user"></i>
                 </div>
                 <div class="input-wrap">
-                    <input type="email" name="email" id="email" autocomplete="off" required autocomplete class="input-contact ic2">
+                    <input type="email" name="email" id="email" autocomplete="off" required autocomplete class="input-contact ic2" value="
+                        <?php    
+                            if (isset($_SESSION['username'])) {
+                                $useremaillogado = ($_SESSION['email']);
+                                echo trim($useremaillogado);
+                            }
+                        ?>
+                    ">
                     <label for="email">Digite o seu e-mail</label>
                     <i class="icon fas fa-envelope"></i>
                 </div>
                 <div class="input-wrap textarea">
-                    <input type="textarea" name="mensagem" id="mensagem"  autocomplete="off" required class="input-contact ic3">
+                    <input type="textarea" name="message" id="mensagem"  autocomplete="off" required class="input-contact ic3">
                     <label for="mensagem">Deixe uma mensagem</label>
                     <i class="icon fas fa-comment"></i>
                 </div>
                 <div class="input-wrap-enviar">
-                        <input type="submit" value="Enviar">
-                        <a href="Mais opções de contacto" class="more">Mais formas</a>
+                    <input type="submit" value="Enviar Mensagem" name="enviar_message">
                 </div>
             </form>
         </div>  

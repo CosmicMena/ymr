@@ -1,5 +1,5 @@
 <?php
-    require_once('config.php');
+    include('config.php');
 
     $sql_product = "SELECT tb_produtos.*
     FROM tb_produtos
@@ -20,8 +20,17 @@ if ($result_product->num_rows > 0) {
                     <p>QTD: <input type="number" name="quantidadeInput" id="quantidadeInput" value="1"></p>
                 </div>
                 <div class="produto-item-img-actions">
-                    <a href="produto.php?produto=' . urlencode($row["produto_name"]) . '&category=' . urlencode($categoriaSelecionada) . '" class="prod-btn" title="Ver Mais"><i class="fa-solid fa-eye"></i></a>
-                    <a class="prod-btn prod-btn-2" title="Adicionar ao carrinho" onClick="adicionarAoCarrinho(' . $row['id_produto'] . ')"><i class="fa-solid fa-cart-shopping"></i></a> 
+                    <a href="produto.php?produto=' . urlencode($row["produto_name"]) . '&category=' . urlencode($categoriaSelecionada) . '" class="prod-btn" title="Ver Mais"><i class="fa-solid fa-eye"></i></a>';   
+
+                    if (isset($_SESSION['username'])) {
+                        $userid = ($_SESSION['id']);
+                        echo '<a class="prod-btn prod-btn-2" title="Adicionar ao carrinho" onClick="adicionarAoCarrinho(' . $row['id_produto'] . ','. $userid .')"><i class="fa-solid fa-cart-shopping"></i></a>';
+                    } else {
+                        echo '<a class="prod-btn prod-btn-2" title="Adicionar ao carrinho" href="login.php"><i class="fa-solid fa-cart-shopping"></i></a>';
+                    }
+
+                    
+                echo'
                 </div>
             </div>
             <div class="produto-item-body">

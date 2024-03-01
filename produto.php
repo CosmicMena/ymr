@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 include('config.php');
 
 if (isset($_GET['produto']) && isset($_GET['category'])) {
@@ -162,10 +165,10 @@ if (isset($_GET['categoria']) && isset($_GET['quantidade']) && isset($_GET['idPr
 
 
 <script>
-    function adicionarAoCarrinho1(idProduto) {
+    function adicionarAoCarrinho1(idProduto, userid) {
         var quantidade = document.getElementById("quantidadeInput").value;
-
-        var url1 = "php/add-carrinho2.php?idProduto=" + idProduto + "&quantidade=" + quantidade;
+        
+        var url1 = "php/add-carrinho2.php?idProduto=" + idProduto + "&quantidade=" + quantidade  + "&userid=" + userid;
 
         window.location.href = url1;
     }

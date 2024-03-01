@@ -15,9 +15,15 @@ if ($result_product->num_rows > 0) {
                     <p>QTD: <input type="number" name="quantidadeInput" id="quantidadeInput" value="1"></p>
                 </div>
                 <div class="produto-item-img-actions">
-                    <a href="produto.php?produto=' . urlencode($produto_name) . '&category=' . urlencode($categoria) . '" class="prod-btn" title="Ver Mais"><i class="fa-solid fa-eye"></i></a>
-                    <a class="prod-btn prod-btn-2" title="Adicionar ao carrinho" onClick="adicionarAoCarrinho(' . $row['id_produto'] . ', \'' . $pesquisa . '\')"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
+                    <a href="produto.php?produto=' . urlencode($produto_name) . '&category=' . urlencode($categoria) . '" class="prod-btn" title="Ver Mais"><i class="fa-solid fa-eye"></i></a>';   
+                    if (isset($_SESSION['username'])) {
+                        $userid = ($_SESSION['id']);
+                        echo '<a class="prod-btn prod-btn-2" title="Adicionar ao carrinho" onClick="adicionarAoCarrinho(' . $row['id_produto'] . ', ' . $userid . ', \'' . $pesquisa . '\')"><i class="fa-solid fa-cart-shopping"></i></a>';
+                    } else {
+                        echo '<a class="prod-btn prod-btn-2" title="Adicionar ao carrinho" href="login.php"><i class="fa-solid fa-cart-shopping"></i></a>';
+                    }
+
+                echo'</div>
             </div>
             <div class="produto-item-body">
                 <span>' . $categoria . '</span>

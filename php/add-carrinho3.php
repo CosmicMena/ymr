@@ -1,11 +1,13 @@
 <?php
 require_once('../config.php');
 
-if (isset($_GET['idProduto']) && isset($_GET['quantidade']) && isset($_GET['urlretorno'])) {
+if (isset($_GET['idProduto']) && isset($_GET['quantidade']) && isset($_GET['urlretorno']) && isset($_GET['userid'])) {
     
     $idProduto = $_GET['idProduto'];
     $quantidade = $_GET['quantidade'];
     $urlretorno = $_GET['urlretorno'];
+    $userid = $_GET['userid'];
+
 
     $sql_product = "SELECT tb_produtos.*, tb_categ.category_name
     FROM tb_produtos
@@ -21,7 +23,7 @@ if (isset($_GET['idProduto']) && isset($_GET['quantidade']) && isset($_GET['urlr
     $produto_preco = $row["preco_produto"];
     $categoria = $row["category_name"];
 
-    $check_product_query = "SELECT * FROM tb_carrinho WHERE produto_name = '$produto_name'";
+    $check_product_query = "SELECT * FROM tb_carrinho WHERE produto_name = '$produto_name'  and id_user = '$userid'";
     $check_product_result = $conn->query($check_product_query);
 
     if ($check_product_result->num_rows > 0) {
@@ -29,7 +31,7 @@ if (isset($_GET['idProduto']) && isset($_GET['quantidade']) && isset($_GET['urlr
         header("Location: $urlretorno");
 
     } else {
-        $sql_add_to_cart = "INSERT INTO tb_carrinho (produto_name, produto_img, preco_produto,  category_name,  quantidade_produto) VALUES ('$produto_name' , '$prduto_img' , $produto_preco , '$categoria' , '$quantidade')";
+        $sql_add_to_cart = "INSERT INTO tb_carrinho (produto_name, produto_img, preco_produto, category_name, quantidade_produto, id_user) VALUES ('$produto_name' , '$prduto_img' , $produto_preco , '$categoria' , '$quantidade', '$userid')";
 
         $conn->query($sql_add_to_cart);
         

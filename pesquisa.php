@@ -1,4 +1,8 @@
+
 <?php
+
+session_start();
+
     require_once('config.php');
 
     if (isset($_GET['pesquisa'])) {
@@ -157,10 +161,10 @@
     <!--Script do Java Script-->
     
 <script>
-    function adicionarAoCarrinho(idProduto, pesquisa) {
+    function adicionarAoCarrinho(idProduto, userid, pesquisa) {
         var quantidade = document.getElementById("quantidadeInput").value;
         var urlretorno = "../pesquisa.php?pesquisa=" + pesquisa;
-        var url = "php/add-carrinho3.php?idProduto=" + idProduto + "&quantidade=" + quantidade + "&urlretorno=" + urlretorno;
+        var url = "php/add-carrinho3.php?idProduto=" + idProduto + "&quantidade=" +  quantidade + "&urlretorno=" + urlretorno + "&userid=" + userid;
 
         window.location.href = url;
     }
