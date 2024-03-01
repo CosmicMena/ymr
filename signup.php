@@ -57,7 +57,15 @@
 
                 if ($pass === $cpass) {
 
-                    $sql = "insert into users(username,email,password,id_rule,data_criacao) values('$name','$email','$passwd','$rule','$data')";
+                    $sql = "INSERT INTO `users` (`username`, `email`, `password`, `id_rule`, `data_criacao`) 
+                    values 
+                    (
+                        `".$name."`,
+                        `".$email."`,
+                        `".$passwd."`,
+                        `".$rule."`,
+                        `".$data."`
+                    )";
 
                     $result = mysqli_query($conn, $sql);
 
@@ -88,7 +96,7 @@
                         </style>
                         <div class='message-sec'>
                             <div class='message'>
-                                <p>Este email já está sendo usado, Por favor insira outro!</p>
+                                <p>(O erro tá memo aqui) Este email já está sendo usado, Por favor insira outro!</p>
                                 <br>
                                 <a href='javascript:self.history.back()'>
                                     Tentar de Novo

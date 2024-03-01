@@ -56,7 +56,7 @@
             if (isset($_SESSION['username'])) {
                 echo '<li><a href="carrinho.php" class="carrinho"><i class="fa-solid fa-cart-shopping"></i> Carrinho ('.$total_registros.')</a></li>';
             } else {
-                echo '<li><a href="login.php" class="carrinho"><i class="fa-solid fa-cart-shopping"></i> Carrinho ('.$total_registros.')</a></li>';
+                echo '<li><a href="login.php" class="carrinho"><i class="fa-solid fa-cart-shopping"></i> Carrinho (0)</a></li>';
             }
         ?>
     
