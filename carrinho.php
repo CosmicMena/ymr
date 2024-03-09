@@ -111,7 +111,7 @@ include("config.php");
                             </tbody>
                         </table>
                         <div class="produtos-header produtos-header2">
-                            <p><a href="home.html">Continuar comprando <i class="fa-solid fa-cart-shopping"></i></a></p>
+                            <p><a href="home.php">Continuar comprando <i class="fa-solid fa-cart-shopping"></i></a></p>
                         </div>    
                     </div>
                     

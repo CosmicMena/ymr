@@ -32,7 +32,7 @@ if ($result) {
 
                 echo '</div>
               </td>';
-        echo '<td>' . $row['id'] . '</td>';
+        echo '<td>' . $row['id_user'] . '</td>';
         echo '<td>' . $row['email'] . '</td>';
         echo '<td>' . date('d-m-Y', strtotime($row['data_criacao'])) . '</td>';
         echo '<td>' . date('d-m-Y', strtotime($row['acesso'])) . '</td>';

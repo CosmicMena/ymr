@@ -29,17 +29,16 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <a href="#" class="logo">
-            <i class='bx bx-code-alt'></i>
-            <div class="logo-name"><span>Admin</span>YMR</div>
+            <img src="../images/LOGO.png" alt="YMR Logo">
         </a>
         <ul class="side-menu">
-            <li class="active"><a href="#"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
-            <li><a href="#"><i class="fa-solid fa-eye"></i>Visão Do Site</a></li>
-            <li><a href="#"><i class="fa-regular fa-message"></i>Mensagens</a></li>
-            <li><a href="#"><i class="fa-solid fa-bag-shopping"></i>Encomendas</a></li>
-            <li><a href="#"><i class="fa-solid fa-database"></i>Gestão de Stock</a></li>
-            <li><a href="#"><i class="fa-solid fa-users"></i>Usuários</a></li>
-            <li><a href="#"><i class="fa-solid fa-gear"></i>Configurações</a></li>
+            <li class="active"><a href="#"><i class="fa-solid fa-chart-simple"></i><p>Analytics</p></a></li>
+            <li><a href="#"><i class="fa-solid fa-eye"></i><p>Visão Do Site</p></a></li>
+            <li><a href="#"><i class="fa-regular fa-message"></i><p>Mensagens</p></a></li>
+            <li><a href="#"><i class="fa-solid fa-bag-shopping"></i><p>Encomendas</p></a></li>
+            <li><a href="#"><i class="fa-solid fa-database"></i><p>Gestão de Stock</p></a></li>
+            <li><a href="#"><i class="fa-solid fa-users"></i><p>Usuários</p></a></li>
+            <li><a href="#"><i class="fa-solid fa-gear"></i><p>Configurações</p></a></li>
         </ul>
         <ul class="side-menu">
             <li>
@@ -70,7 +69,7 @@
                 <span class="count">12</span>
             </a>
             <a href="#" class="profile">
-                <img src="images/logo.png">
+                <img src="images/user.png">
             </a>
         </nav>
 
@@ -310,7 +309,7 @@
                                 <td>5.500 kz</td>
                                 <td>10 unidade(s)</td>
                                 <td>14-08-2023</td>
-                                <td><span class="status completed">Completed</span></td>
+                                <td><span class="status completed">Sucesso</span></td>
                             </tr>
                             <tr>
                                 <td>
@@ -323,7 +322,7 @@
                                 <td>12.500 kz</td>
                                 <td>3 unidade(s)</td>
                                 <td>14-08-2023</td>
-                                <td><span class="status pending">Pending</span></td>
+                                <td><span class="status pending">Pendente</span></td>
                             </tr>
                             <tr>
                                 <td>
@@ -336,7 +335,7 @@
                                 <td>5.500 kz</td>
                                 <td>10 unidade(s)</td>
                                 <td>14-08-2023</td>
-                                <td><span class="status process">Processing</span></td>
+                                <td><span class="status process">Cancelada</span></td>
                             </tr>
                         </tbody>
                     </table>

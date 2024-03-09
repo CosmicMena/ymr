@@ -35,8 +35,8 @@ if ($result_product->num_rows > 0) {
             </div>
             <div class="produto-item-body">
                 <span>' . $categoriaSelecionada . '</span>
-                <h2><span>AO </span>' . $row["preco_produto"] .'<span>.00</span></h2>
-                <h3>' . $row["produto_name"] . '</h3>
+                './/<h2><span>AO </span>' . $row["preco_produto"] .'<span>.00</span></h2>
+                '<h3>' . $row["produto_name"] . '</h3>
             </div>
         </div>';
     }

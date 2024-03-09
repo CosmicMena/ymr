@@ -27,8 +27,8 @@ if ($result_product->num_rows > 0) {
             </div>
             <div class="produto-item-body">
                 <span>' . $categoria . '</span>
-                <h2><span>AO </span>' . $produto_preco .'<span>.00</span></h2>
-                <h3>' . $produto_name . '</h3>
+                './/<h2><span>AO </span>' . $produto_preco .'<span>.00</span></h2>
+                '<h3>' . $produto_name . '</h3>
             </div>
         </div>';
     }

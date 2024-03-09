@@ -30,7 +30,7 @@
             $cpass = $_POST['cpass'];
 
 
-            $check = "select * from users where email='{$email}'";
+            $check = "select * from users where email='".$email."'";
             $res = mysqli_query($conn, $check);
             $passwd = password_hash($pass, PASSWORD_DEFAULT);
             $key = bin2hex(random_bytes(12));
@@ -57,14 +57,14 @@
 
                 if ($pass === $cpass) {
 
-                    $sql = "INSERT INTO `users` (`username`, `email`, `password`, `id_rule`, `data_criacao`) 
-                    values 
+                    $sql = "INSERT INTO users (username, email, passwd, id_rule, data_criacao) 
+                    VALUES 
                     (
-                        `".$name."`,
-                        `".$email."`,
-                        `".$passwd."`,
-                        `".$rule."`,
-                        `".$data."`
+                        '$name',
+                        '$email',
+                        '$passwd',
+                        '$rule',
+                        '$data'
                     )";
 
                     $result = mysqli_query($conn, $sql);
@@ -101,6 +101,11 @@
                                 <a href='javascript:self.history.back()'>
                                     Tentar de Novo
                                 </a>
+                                <p>Nome $name</p>
+                                <p>Email $email</p>
+                                <p>Senha Hash $passwd</p>
+                                <p>Rule $rule</p>
+                                <p>Data $data</p>
                             </div>
                         </div>";
                     }
@@ -127,45 +132,44 @@
 
         ?>
     <div class="login-page">
-      <div class="login-container">
-        <div class="left-login-container">
-          <h2>Cadastro</h2>
-          
-          <span>Preencha todos os campos</span>
-          <form action="signup.php" method="post" class="login-form">
-            <div class="input-wrap">
-                <input type="text" name="username" id="name" autocomplete="off" required class="input-login">
-                <label for="name">Nome</label>
-                <i class="icon fa-solid fa-user"></i>
+        <div class="login-container">
+            <div class="left-login-container">
+                <h2>Cadastro</h2>
+                <span>Preencha todos os campos</span>
+                <form method="post" class="login-form">
+                    <div class="input-wrap">
+                        <input type="text" name="username" id="name" autocomplete="off" required class="input-login">
+                        <label for="name">Nome</label>
+                        <i class="icon fa-solid fa-user"></i>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="email" name="email" id="email" autocomplete="off" required class="input-login">
+                        <label for="email">E-mail</label>
+                        <i class="icon fas fa-envelope"></i>
+                    </div>
+                    <div class="input-wrap">
+                        <input class="input-login password" type="password" name="pass" id="password" autocomplete="off" required>
+                        <label for="password">Password</label>
+                        <i class="fa-solid fa-eye icon toggle"></i>
+                    </div>
+                    <div class="input-wrap">
+                        <input class="input-login" type="password" name="cpass" id="password1" autocomplete="off" required>
+                        <label for="password1">Confirmar Password</label>
+                        <i class="icon fa-solid fa-eye"></i>
+                    </div>
+                    <span class="a-span">Já tem uma conta? <a href="login.php">Faça Login</a></span>
+                    <div class="input-wrap-enviar">
+                        <input type="submit" value="Criar Conta" name="register">
+                    </div>
+                </form>
             </div>
-            <div class="input-wrap">
-                <input type="email" name="email" id="email" autocomplete="off" required class="input-login">
-                <label for="email">E-mail</label>
-                <i class="icon fas fa-envelope"></i>
+            <div class="right-login-container">
+            <div class="text-box">
+                <h1>YMR INDUSTRIAL</h1>
+                <p>O Que precisa está à distância de um click</p>
             </div>
-            <div class="input-wrap">
-                <input class="input-login password" type="password" name="pass" id="password" autocomplete="off" required>
-                <label for="password">Password</label>
-                <i class="fa-solid fa-eye icon toggle"></i>
             </div>
-            <div class="input-wrap">
-                <input class="input-login" type="password" name="cpass" id="password1" autocomplete="off" required>
-                <label for="password1">Confirmar Password</label>
-                <i class="icon fa-solid fa-eye"></i>
-            </div>
-            <span class="a-span">Já tem uma conta? <a href="login.php">Faça Login</a></span>
-            <div class="input-wrap-enviar">
-                <input type="submit" value="Entrar" name="register">
-            </div>
-          </form>
-        </div>
-        <div class="right-login-container">
-          <div class="text-box">
-            <h1>YMR INDUSTRIAL</h1>
-            <p>O Que precisa está à distância de um click</p>
-          </div>
-        </div>
-      </div> 
+        </div> 
     </div>
     <?php
       }

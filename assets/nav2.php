@@ -1,6 +1,6 @@
 <nav class="nav2">
     <ul>
-        <li><span class="more">Todos Produtos <i class="fa-solid fa-chevron-down"></i></span>
+        <li><span class="more"><span>Todos Produtos </span><i class="fa-solid fa-chevron-down"></i></span>
         <ul>
             <li><a href="#">Adhesives, Sealants & Tape</a></li>
             <li><a href="#">Paint, Equipment & Supplies</a></li>

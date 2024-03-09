@@ -36,7 +36,7 @@
             if (isset($_SESSION['username'])) {
                 echo '<li><a href=""><i class="fa-solid fa-user"></i> Minha conta</a></li>';
                 $userId = ($_SESSION['id']);
-                $sql_count = "SELECT COUNT(*) AS total_registros FROM tb_carrinho  where id_user = '$userId'";
+                $sql_count = "SELECT COUNT(*) AS total_registros FROM tb_carrinho where id_user = '$userId'";
             } else {
                 echo '<li><a href="login.php">Fazer Login <i class="fa-solid fa-user"></i></a></li>';
                 $sql_count = "SELECT COUNT(*) AS total_registros FROM tb_carrinho where id_user = '0'";

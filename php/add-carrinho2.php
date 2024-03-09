@@ -21,7 +21,7 @@ if (isset($_GET['idProduto']) && isset($_GET['quantidade']) && isset($_GET['user
     $produto_preco = $row["preco_produto"];
     $categoria = $row["category_name"];
 
-    $check_product_query = "SELECT * FROM tb_carrinho WHERE produto_name = '$produto_name'  and id_user = '$userId'";
+    $check_product_query = "SELECT * FROM tb_carrinho WHERE produto_name = '$produto_name' and id_user = '$userId'";
     $check_product_result = $conn->query($check_product_query);
 
     if ($check_product_result->num_rows > 0) {
@@ -29,7 +29,7 @@ if (isset($_GET['idProduto']) && isset($_GET['quantidade']) && isset($_GET['user
         header("Location: ../produto.php?produto=$produto_name&category=$categoria");
 
     } else {
-        $sql_add_to_cart = "INSERT INTO tb_carrinho (produto_name, produto_img, preco_produto, category_name, quantidade_produto, id_user) VALUES ('$produto_name' , '$prduto_img' , $produto_preco , '$categoria' , '$quantidade', '$userid')";
+        $sql_add_to_cart = "INSERT INTO tb_carrinho (produto_name, produto_img, preco_produto, category_name, quantidade_produto, id_user) VALUES ('$produto_name' , '$prduto_img' , '$produto_preco' , '$categoria' , '$quantidade', '$userid')";
 
         $conn->query($sql_add_to_cart);
         

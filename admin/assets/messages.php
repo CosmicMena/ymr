@@ -18,6 +18,7 @@
             if($result) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo '<tr>
+                        
                         <td>
                             <div class="img-perfil">
                                 <img src="images/user.png">
@@ -28,7 +29,7 @@
                         <td><p>'. date('d-m-Y', strtotime($row['data_message'])) . '</p></td>
                         <td class="message-td"><p>'. $row['mensagem'] . '</p></td>';
                         if ($row['status'] == 0) {
-                            echo '<td><span class="status pending">Pendente</span></td>';
+                            echo '<td><a href="mailto: '.$row['email'].'"><span class="status pending">Pendente</span></a></td>';
                         } else {
                             echo '<td><span class="status completed">Respondido</span></td>';
                         }

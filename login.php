@@ -40,7 +40,7 @@
 
           $row = mysqli_fetch_assoc($res);
 
-          $password = $row['password'];
+          $password = $row['passwd'];
 
           $decrypt = password_verify($pass, $password);
 

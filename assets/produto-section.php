@@ -25,10 +25,10 @@
                             Quantidade em Stock: <?php echo $stock; ?>
                         </p>
                     </div>
-                    <div class="preco">
-                        <p>Preço: <span><?php echo $produto_preco; ?> kz</span>
+                    <!--<div class="preco">
+                        <p>Preço: <span><?php// echo $produto_preco; ?> kz</span>
                         </p>
-                    </div>
+                    </div>-->
                     <div class="action">
                         <p class="quantidade">QTD: <input type="number" name="" id="quantidadeInput" value="1"></p>
                         <?php    
@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="produto-body-main">
-            <div class="produtos-header produtos-header1">
+            <!--<div class="produtos-header produtos-header1">
                 <h1>Escpecificações</h1>
             </div>
             <table>
@@ -66,7 +66,7 @@
                         <td><p>Sim</p></td>
                     </tr>
                 </tbody>
-            </table>
+            </table>-->
             <div class="produtos-header produtos-header2">
                 <p><a href="home.php">Continuar comprando <i class="fa-solid fa-cart-shopping"></i></a></p>
             </div>    
