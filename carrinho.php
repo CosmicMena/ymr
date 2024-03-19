@@ -39,7 +39,7 @@ include("config.php");
 
             if (isset($_SESSION['username'])) {
                 $userId = ($_SESSION['id']);
-                $sql_cart = "SELECT * FROM tb_carrinho where id_user = '$userId'";
+                $sql_cart = "SELECT * FROM tb_carrinho where id_user = '$userId' AND encomenda_status = '1'";
             } else {
                 header("location: home.php");
             }
@@ -106,7 +106,7 @@ include("config.php");
                                 }
                                 ?>
                                 <tr class="footer-tr">
-                                    <td colspan="6" class="footer-td">   <a href="home.html" class="btn btn-success">Pedir Orçamento<i class="fa-solid fa-cart-shopping"></i></a></td>
+                                    <td colspan="6" class="footer-td"><a href="php/pedido_orcamento.php" class="btn btn-success">Pedir Orçamento<i class="fa-solid fa-cart-shopping"></i></a></td>
                                 </tr>
                             </tbody>
                         </table>

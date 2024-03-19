@@ -29,7 +29,7 @@ if (isset($_GET['idProduto']) && isset($_GET['quantidade']) && isset($_GET['user
         header("Location: ../produtos.php?categoria=$categoria");
 
     } else {
-        $sql_add_to_cart = "INSERT INTO tb_carrinho (produto_name, produto_img, preco_produto, category_name, quantidade_produto, id_user) VALUES ('$produto_name' , '$produto_img' , $produto_preco , '$categoria' , '$quantidade', '$userid')";
+        $sql_add_to_cart = "INSERT INTO tb_carrinho (produto_name, produto_img, preco_produto, category_name, quantidade_produto, id_user, encomenda_status ) VALUES ('$produto_name' , '$produto_img' , $produto_preco , '$categoria' , '$quantidade', '$userid', '1')";
 
         $conn->query($sql_add_to_cart);
         

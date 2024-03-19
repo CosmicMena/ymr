@@ -261,7 +261,7 @@
                 </div>
             </section>
 
-            <section class="main-section" id="orders">
+            <!--<section class="main-section" id="orders">
                 <div class="header">
                     <div class="left">
                         <h1>Encomendas</h1>
@@ -340,7 +340,8 @@
                         </tbody>
                     </table>
                 </div>
-            </section>
+            </section>-->
+            <?php include('assets/orders.php'); ?>
 
             <?php include('assets/stock-list.php'); ?>
 
