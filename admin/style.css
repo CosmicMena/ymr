@@ -352,7 +352,7 @@ body{
 
 /*=============================================================*/
 /*======================== HEADER MAIN ========================*/
-/*=============================================================*/
+/*============================================================= status*/
 
 .content main .header{
     display: flex;
@@ -388,6 +388,13 @@ body{
 .content main .header .left .breadcrumb li a.active{
     color: var(--color-secundary);
     pointer-events: none;
+}
+
+a.report{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: var(--color-secundary);
+    color: white;
 }
 
 
@@ -490,6 +497,7 @@ body{
     text-align: left;
     border-bottom: 1px solid var(--color-gray5);
 }
+
 
 .content main .bottom-data .orders table td{
     padding: 16px 0;
@@ -630,6 +638,11 @@ table.tabela th{
     padding-right: 10px;
 }
 
+
+table.tabela th.actions-table{
+    text-align: center;
+}
+
 table.tabela td .rule{
     width: 10px;
     height: 10px;
@@ -655,6 +668,13 @@ table.tabela td{
     padding-right: 10px;
 }
 
+table.tabela td.cell-actions{
+    text-align: center;
+}
+
+table.tabela td.cell-actions a{
+    color: white;
+}
 
 table.tabela td.disp{
     color: var(--success);

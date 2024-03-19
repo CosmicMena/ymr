@@ -107,24 +107,7 @@ include("config.php");
                     <div class="aside-box-filter-header">
                         <h3>Categorias</h3>
                     </div>
-                    <div class="aside-box-filter-body">
-                        <ul>
-                            <li><a href="#">Adhesives, Sealants & Tape</a></li>
-                            <li><a href="#">Paint, Equipment & Supplies</a></li>
-                            <li><a href="#">Safety Equipment</a></li>
-                            <li><a href="#">Material Handling</a></li>
-                            <li><a href="#" class="active">Test instruments</a></li>
-                            <li><a href="#">Lubrificants</a></li>
-                            <li><a href="#">Lighting</a></li>
-                            <li><a href="#">Tools</a></li>
-                            <li><a href="#">Security</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Pumps</a></li>
-                            <li><a href="#">Lab Supplies</a></li>
-                            <li><a href="#">Hydraulics</a></li>
-                            <li><a href="#">Fasteners</a></li>
-                        </ul>
-                    </div>
+                    <?php include("assets/asides/aside-categories.php");?>
                 </div>
             </aside>
         </section>

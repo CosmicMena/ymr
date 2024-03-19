@@ -45,7 +45,7 @@
                     <th>Preço</th>
                     <th>Qnt. em stock</th>
                     <th>Disponiblidade</th>
-                    <th>Action</th>
+                    <th class="actions-table">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -71,7 +71,10 @@
                         }
                     ?>
                     
-                    <td><span class="status pending">Alterar</span></td>
+                    <td class="cell-actions">
+                        <span class="status pending"><a href="php/edit.php?idProduto=<?php echo $row["id_produto"];?>">Alterar</a></span>
+                        <span class="status process"><a href="php/delete.php?idProduto=<?php echo $row["id_produto"];?>">Deletar</a></span>
+                    </td>
                 </tr>
                 <?php }} ?>
             </tbody>

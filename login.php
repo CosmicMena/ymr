@@ -46,7 +46,7 @@
 
 
           if ($decrypt) {
-            $_SESSION['id'] = $row['id'];
+            $_SESSION['id'] = $row['id_user'];
             $_SESSION['username'] = $row['username'];
             $_SESSION['email'] = $row['email'];
             $_SESSION['id_rule'] = $row['id_rule'];

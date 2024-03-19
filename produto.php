@@ -146,7 +146,7 @@ if (isset($_GET['categoria']) && isset($_GET['quantidade']) && isset($_GET['idPr
                             </div>
                             <div class="produto-item-body">
                                 <span><?php echo $categoria;?></span>
-                                <h2><span>AO </span><?php echo $produto_preco1;?><span>.00</span></h2>
+                                <!--<h2><span>AO </span><?php/* echo $produto_preco1;*/?><span>.00</span></h2>-->
                                 <h3><?php echo $produto_name1;?></h3>
                             </div>
                         </div>

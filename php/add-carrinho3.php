@@ -19,7 +19,7 @@ if (isset($_GET['idProduto']) && isset($_GET['quantidade']) && isset($_GET['urlr
     $row = $result_product->fetch_assoc();
 
     $produto_name = $row['produto_name'];
-    $prduto_img = $row['produto_img'];
+    $produto_img = $row['produto_img'];
     $produto_preco = $row["preco_produto"];
     $categoria = $row["category_name"];
 
@@ -31,16 +31,12 @@ if (isset($_GET['idProduto']) && isset($_GET['quantidade']) && isset($_GET['urlr
         header("Location: $urlretorno");
 
     } else {
-        $sql_add_to_cart = "INSERT INTO tb_carrinho (produto_name, produto_img, preco_produto, category_name, quantidade_produto, id_user) VALUES ('$produto_name' , '$prduto_img' , $produto_preco , '$categoria' , '$quantidade', '$userid')";
+        $sql_add_to_cart = "INSERT INTO tb_carrinho (produto_name, produto_img, preco_produto, category_name, quantidade_produto, id_user) VALUES ('$produto_name' , '$produto_img' , $produto_preco , '$categoria' , $quantidade, $userid)";
 
         $conn->query($sql_add_to_cart);
         
         header("Location: $urlretorno&categoria=$categoria&idProduto=$idProduto&quantidade=$quantidade");
     }
-
-
-    
-
 } 
 ?>
 

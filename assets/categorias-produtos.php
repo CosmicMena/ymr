@@ -37,6 +37,4 @@
             echo "Nenhum resultado encontrado na tabela.";
         }
     ?>
-    
-    
 </div>

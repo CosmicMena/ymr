@@ -14,7 +14,13 @@
     } else {
         echo "Nenhum resultado retornado ou erro na execução da consulta: " . $conn->error;
     }
-
+$array = array(
+    "v1" => "Valor1",
+    2 => "Valor2",
+    3 => "Valor3"
+);
+    
+$array = ["Valor1", "Valor2", "Valor3"];
     
 ?>
 

@@ -40,14 +40,13 @@
             <p>Estamos aqui para o atender</p>
             <form action="home.php" method="post">
                 <div class="input-wrap">
-                    <input type="text" name="username" id="nome" autocomplete="off" required class="input-contact" value="
-                        <?php
+                    <input type="text" name="username" id="nome" autocomplete="off" required class="input-contact" 
+                    value="<?php
                             if (isset($_SESSION['username'])) {
                                 $usernamelogado = trim(($_SESSION['username']));
-                                echo $usernamelogado;
+                                echo trim($usernamelogado);
                             }
-                        ?>
-                    ">
+                        ?>">
                     <label for="nome">Digite o seu nome</label>
                     <i class="icon fas fa-user"></i>
                 </div>
@@ -64,7 +63,8 @@
                     <i class="icon fas fa-envelope"></i>
                 </div>
                 <div class="input-wrap textarea">
-                    <input type="textarea" name="message" id="mensagem"  autocomplete="off" required class="input-contact ic3">
+                    <textarea name="message" id="mensagem" autocomplete="off" required class="input-contact ic3" cols="30" rows="10"></textarea>
+                    <!--<input type="textarea" name="message" id="mensagem"  autocomplete="off" required class="input-contact ic3">-->
                     <label for="mensagem">Deixe uma mensagem</label>
                     <i class="icon fas fa-comment"></i>
                 </div>

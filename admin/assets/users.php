@@ -1,5 +1,5 @@
 <?php
-$query = "SELECT * FROM users";
+$query = "SELECT * FROM users ORDER BY id_rule DESC";
 $result = mysqli_query($conn, $query);
 
 

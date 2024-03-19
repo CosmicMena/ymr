@@ -8,6 +8,8 @@
 
         if ($conn->query($sql_delete) === TRUE) {
             echo "Registros deletados com sucesso!";
+            header("Location: ../carrinho.php");
+            exit(); 
         } else {
             echo "Erro ao deletar registros: " . $conn->error;
         }
@@ -16,6 +18,5 @@
     $conn->close();
 
     
-    header("Location: ../carrinho.php");
-    exit(); 
+    
 ?>

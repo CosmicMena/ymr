@@ -106,7 +106,7 @@ include("config.php");
                                 }
                                 ?>
                                 <tr class="footer-tr">
-                                    <td colspan="6" class="footer-td"><a href="home.html" class="btn btn-success">Cofirmar Compra <i class="fa-solid fa-cart-shopping"></i></a></td>
+                                    <td colspan="6" class="footer-td">   <a href="home.html" class="btn btn-success">Pedir Orçamento<i class="fa-solid fa-cart-shopping"></i></a></td>
                                 </tr>
                             </tbody>
                         </table>

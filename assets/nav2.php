@@ -1,23 +1,25 @@
+<?php
+    require_once('config.php');
+
+    $sql_category = "SELECT * FROM tb_categ";
+    $result_category = $conn->query($sql_category);
+
+?>
 <nav class="nav2">
     <ul>
         <li><span class="more"><span>Todos Produtos </span><i class="fa-solid fa-chevron-down"></i></span>
-        <ul>
-            <li><a href="#">Adhesives, Sealants & Tape</a></li>
-            <li><a href="#">Paint, Equipment & Supplies</a></li>
-            <li><a href="#">Safety Equipment</a></li>
-            <li><a href="#">Material Handling</a></li>
-            <li><a href="#">Test instruments</a></li>
-            <li><a href="#">Lubrificants</a></li>
-            <li><a href="#">Lighting</a></li>
-            <li><a href="#">Tools</a></li>
-            <li><a href="#">Security</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Pumps</a></li>
-            <li><a href="#">Lab Supplies</a></li>
-            <li><a href="#">Hydraulics</a></li>
-            <li><a href="#">Fasteners</a></li>
-        </ul>
-    </li> 
+            <?php if ($result_category->num_rows > 0) { ?>
+            <ul>
+            <?php
+                    while ($row = $result_category->fetch_assoc()) {
+                        echo '<li><a href="produtos.php?categoria=' . $row["category_name"] . '">' . $row["category_name"] . '</a></li>';
+                    }
+                } else {
+                    echo "Nenhum resultado encontrado na tabela.";
+                }
+            ?>
+            </ul>
+        </li> 
     </ul>
     <ul class="large-screen-nav2">
         <div class="search-box">

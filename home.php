@@ -57,6 +57,9 @@ include("config.php");
 
                     //SECÇÃO DE CONTACTO 
                     include('assets/contact.php');
+
+                    //SECÇÃO DOS FAQS
+                    include('assets/faq.php');
                 ?>
             </div>
             <aside>

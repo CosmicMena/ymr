@@ -28,7 +28,7 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-        <a href="#" class="logo">
+        <a href="../home.php" class="logo">
             <img src="../images/LOGO.png" alt="YMR Logo">
         </a>
         <ul class="side-menu">

@@ -29,5 +29,4 @@
                 echo '<li><a href="login.php" class="carrinho"><i class="fa-solid fa-cart-shopping"></i> Carrinho (0)</a></li>';
             }
         ?>
-    
     </ul>
