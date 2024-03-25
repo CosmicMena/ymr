@@ -234,7 +234,60 @@ nav.nav2 ul li ul li a{
 .responsive-nav2 {
     display: none;
 }
+/*Side Bar Menu para telas responsivas*/
+/*Side Bar Menu para telas responsivas*/
+/*Side Bar Menu para telas responsivas*/
+/*Side Bar Menu para telas responsivas*/
 
+nav .menutoggle  {
+    cursor: pointer;
+}
+
+nav .side-bar-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    background-color: var(--color-gray6);
+    right: 100%;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 20px 10px;
+    transition: all 0.3s ease;
+}
+
+nav .side-bar-menu li{
+    text-align: left;
+    width: 100%;
+}
+
+nav .side-bar-menu li:first-child{
+    text-align: right;
+}
+
+nav .side-bar-menu li:first-child a{
+    text-align: right;
+    background-color: var(--color-gray6);
+    font-size: 22px;
+}
+
+nav .side-bar-menu li a{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-gray5);
+}
+
+nav .side-bar-menu li a.active{
+    color: var(--color-gray6);
+    background: var(--color-secundary1);
+}
+
+nav .menutoggle.active + .side-bar-menu {
+    right: 0;
+}
 /* =================================== */
 /* ============== Hero =============== */
 /* =================================== */
@@ -336,6 +389,7 @@ main .hero .hero-bg img.active{
 }
 
 /*
+
 main .hero .hero-img{
     height: 100%;
 }
@@ -475,7 +529,6 @@ aside .aside-box span a{
     background-color: var(--color-primary);
     font-size: 13px;
     transition: all 0.3s ease;
-    border: 1px solid var(--color-primary);
 }
 
 .btn:hover {
@@ -1368,7 +1421,7 @@ produtos-header
 
 .faqs-section .content .faq .faq-p p{
     padding: 20px;
-    line-height: 1.2em;
+    line-height: 1.4em;
     transition: all 0.3s ease;
 }
 
@@ -2125,6 +2178,74 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
  /*===============================================================*/
  /*===============================================================*/
  /*===============================================================*/
+.hero-about {
+    height: 15rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-about .hero-test-center{
+    text-align: center;
+    color: var(--color-gray6);
+    font-weight: 600;
+    font-size: 2.2em;
+    z-index: 3;
+}
+
+.hero-about .hero-black-bg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-about .hero-bg{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translatey(-50%);
+}
+
+.flex-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-div .content{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    max-width: 60rem;
+}
+
+.flex-div .content .about-text h1{
+    color: var(--color-secundary1);
+    font-size: 2.5em;
+    padding-bottom: 10px;
+}
+
+.flex-div .content .about-text p{
+    color: var(--color-secundary1);
+    font-size: 1.3em;
+    line-height: 1.7em;
+    padding-bottom: 20px;
+
+}
+
+ /*===============================================================*/
+ /*===============================================================*/
+ /*===============================================================*/
+ /*===============================================================*/
 
 
 
@@ -2183,10 +2304,6 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
 
     nav.nav2{
         padding: 0 30px;
-    }
-    
-    main .hero{
-        justify-content: center;
     }
     
     main .hero .hero-text h1{
@@ -2288,6 +2405,10 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
 
 @media (max-width: 885px){
 
+    main .hero .hero-text {
+        margin-left: 1rem;
+    }
+
     .tipoProdutos {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -2344,11 +2465,24 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
 }
 
 @media (max-width: 500px){
+    nav.nav2 ul li span {
+        padding-left: 0;
+    }
+        
+    .faqs-section .content .faq.active .faq-p{
+        min-height: 12rem;
+    }
     
-    main .hero {
-        height: auto;
-        width: 100%;
+    main .hero{
+        height: 16rem;
         flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+    }
+
+    main .hero .hero-bg img {
+        width: 100%;
+        height: 100%;
     }
 
     main .hero .hero-text{
@@ -2356,13 +2490,12 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
         padding: 20px;
     }
 
-    main .hero .hero-img{
-        height: 15rem;
+    main .hero .hero-text h1 {
+        font-size: 2em;
+        font-weight: 700;
     }
-
-    .contact_s .content .texto {
-        width: 94%;
-        padding: 10px;
+    main .hero .hero-text p {
+        padding-left: 0;
     }
 
     .categorias .catg-card {
@@ -2428,15 +2561,55 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
         min-width: 100%;
     }
 
+    /*heder da secção de produtos*/
+    .produtos .produtos-header h1 a,
+    .produtos .produtos-header h1{
+        font-size: 0.95em;
+        font-weight: 500;
+    }
+
+    .produtos {
+        margin-top: 0px;
+    }
+
 }
 
 @media (max-width: 459px){
     
+    
+    /* ====== Card das categorias =======*/
+    /* ====== Card das categorias =======*/
+    /* ====== Card das categorias =======*/
+    .tipoProdutos {
+        gap: 10px;
+    }
+    .tipoProdutos .produto {
+        width: 150px;
+    }
+    .tipoProdutos .vermaisbtn {
+        width: 150px;
+        height: 250px;
+    }
+    .tipoProdutos .vermaisbtn h1{
+        font-size: 17px;
+    }
+    /* ====== Card das categorias =======*/
+    /* ====== Card das categorias =======*/
+    /* ====== Card das categorias =======*/
+    
     .produtos .produtos-body{
         grid-template-columns: 1fr;
     }
-    .tipoProdutos {
-        grid-template-columns: 1fr;
+
+    .categorias .catg-card {
+        height: 10rem;
+    }
+
+    .categorias .catg-card h2 {
+        font-size: 1.5em;
+    }
+    .categorias .catg-card p {
+        font-size: 0.9em;
     }
 
     .produto-desc .actions{
@@ -2452,6 +2625,14 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
 
     .action {
         gap: 10px;
+    }
+
+    .contact_s .content .texto {
+        width: 320px;
+    }
+
+    .faqs-section .section-h1 h1 {
+        font-size: 1.8em;
     }
 }
 
@@ -2472,6 +2653,44 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
 
     li span.more span {
         display: none;
+    }
+    /*?????? TABELAS RESPONSIVAS ??????*/
+    /*?????? TABELAS RESPONSIVAS ??????*/
+    /*?????? TABELAS RESPONSIVAS ??????*/
+
+    table {
+        max-width: 350px;
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: left;
+        font-weight: 400;
+    }
+
+    td .td-p-category{
+        display: none;
+    }
+
+    td.img-td {
+        justify-content: center;
+    }
+
+    td::before {
+        content: attr(data-cell);
+        font-weight: 700;
+        width: 100px;
+    }
+
+    td.img-td::before {
+        content: " ";
+        width: 0;
     }
 }
 
@@ -2494,4 +2713,4 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
     }   
 }
 
-/*produto-desc  produtos .produtos-header h1 a  .produto{  login-page logo-area .faqs-section .btn .input-contact*/
+/*produto-desc  produtos .produtos-header h1 a  .produto{  login-page logo-area .faqs-section .btn .input-contact .faqs-section .content .faq .faq-p .btn */

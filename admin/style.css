@@ -348,6 +348,11 @@ body{
 
 .content main .main-section{
     width: 100%;
+    display: none;
+}
+
+.content main .main-section:first-child{
+    display: block;
 }
 
 /*=============================================================*/

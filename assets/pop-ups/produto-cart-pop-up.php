@@ -19,16 +19,16 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>
+                            <td class="img-td">
                                 <img src="<?php echo $produto_img; ?>">
                             </td>
-                            <td class="texto">
-                                <p><?php echo $categoria;?></p>
+                            <td class="texto" data-cell="Produto">
+                                <p class="td-p-category"><?php echo $categoria;?></p>
                                 <p><?php echo $produto_name;?></p>
                             </td>
-                            <td><p><?php echo $quantidade;?></p></td>
-                            <td><p><?php echo $produto_preco;?></p></td>
-                            <td><p><?php echo (int)$quantidade * (int)$produto_preco;?></p></td>
+                            <td data-cell="Quantidade"><p><?php echo $quantidade;?></p></td>
+                            <td data-cell="Preço"><p><?php echo $produto_preco;?></p></td>
+                            <td data-cell="Total"><p><?php echo (int)$quantidade * (int)$produto_preco;?></p></td>
                         </tr>
                     </tbody>
                 </table>

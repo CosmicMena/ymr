@@ -31,7 +31,7 @@
         if (isset($_POST['Cadastrar'])) {
 
             $produto_name = $_POST['nomeproduto'];
-            $produto_img = "images/produtos/".$_POST['imagem'];
+            $produto_img = $_POST['imagem'];
             $stock_produto = $_POST['stock'];
             $preco_produto = $_POST['preco'];
             $desc_produto = $_POST['desc_produto'];
@@ -86,7 +86,9 @@
                             <i class="icon fa-solid fa-calendar-minus"></i>
                         </div>
                         <div class="input-wrap">
-                            <input type="file" id="file-upload" class="input-file" name="imagem" value="Imagem do produto"/>
+                            <input type="text" name="imagem" id="imgurl" autocomplete="off" required class="input-login">
+                            <label for="imgurl">URL - Imagem do produto</label>
+                            <i class="icon fa-solid fa-calendar-minus"></i>
                         </div>
                         <div class="inline-input-wrap">
                             <div class="input-wrap">

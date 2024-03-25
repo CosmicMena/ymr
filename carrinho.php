@@ -76,18 +76,18 @@ include("config.php");
                                             <td class="img-td">
                                                 <img src="<?php echo $row["produto_img"]; ?>" alt="">
                                             </td>
-                                            <td class="texto">
-                                                <p style="font-weight: 400;"><?php echo $row["category_name"]; ?></p>
+                                            <td class="texto" data-cell="Categoria">
+                                                <p style="font-weight: 400;" class="td-p-category"><?php echo $row["category_name"]; ?></p>
                                                 <p><?php echo $row["produto_name"]; ?></p>
                                             </td>
-                                            <td>
+                                            <td data-cell="Quantidade">
                                                 <div class="action">
                                                     <p class="quantidade">QTD: <input type="number" name="" id="" value="<?php echo $row["quantidade_produto"]; ?>"></p>
                                                 </div>
                                             </td>
-                                            <td><p><?php echo $row["preco_produto"]; ?></p></td>
-                                            <td><p><?php echo $row["quantidade_produto"] * $row["preco_produto"] ; ?></p></td>
-                                            <td class="cart-actions">
+                                            <td data-cell="Preço"><p><?php echo $row["preco_produto"]; ?></p></td>
+                                            <td data-cell="Total"><p><?php echo $row["quantidade_produto"] * $row["preco_produto"] ; ?></p></td>
+                                            <td class="cart-actions" data-cell="Ação">
                                                 <?php 
                                                     echo '<a href="php/rm-carrinho.php?produtoName='. $row['produto_name'] .'" class="btn btn-danger"><i class="fa-solid fa-xmark"></i> Remover</a>';
                                                 ?>

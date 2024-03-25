@@ -35,59 +35,31 @@ include("config.php");
         ?>
     </header>
     <main>  
-        <section class="main-body">
-            <div class="main-sections">
-                <div class="produtos">
-                    <div class="produtos-header">
-                        <h1><a href="home.php">home</a> > Sobre nós</h1>
-                    </div>
-                    <div class="about-hero">
-                        <img src="images/about-hero.jpeg" alt="">
-                        <h1>Quem Somos?</h1>
-                    </div>
-                    <div class="text-info">
-                        <div class="text-info-text">
-                            <h1>História</h1>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae impedit nostrum iusto cumque, amet deserunt eius ipsa blanditiis aperiam doloremque atque ex saepe doloribus, repellendus modi voluptatem possimus eveniet excepturi! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint ullam corrupti autem debitis animi exercitationem aut commodi enim eaque rem odio aliquam, voluptatum, saepe ipsa ipsum hic! Commodi, nobis quam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam maiores rerum iure, laboriosam dolor exercitationem corrupti voluptate. Autem eos tempore praesentium accusantium fugiat animi unde, atque ab nesciunt reiciendis harum? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="text-info-img">
-                            <img src="images/info.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="text-info text-info-reverse">
-                        <div class="text-info-img">
-                            <img src="images/info.webp" alt="">
-                        </div>
-                        <div class="text-info-text">
-                            <h1>Nossos Valores</h1>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae impedit nostrum iusto cumque, amet deserunt eius ipsa blanditiis aperiam doloremque atque ex saepe doloribus, repellendus modi voluptatem possimus eveniet excepturi! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint ullam corrupti autem debitis animi exercitationem aut commodi enim eaque rem odio aliquam, voluptatum, saepe ipsa ipsum hic! Commodi, nobis quam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam maiores rerum iure, laboriosam dolor exercitationem corrupti voluptate. Autem eos tempore praesentium accusantium fugiat animi unde, atque ab nesciunt reiciendis harum? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="partners">
-                        <h2>Nosos Parceiros</h2>
-                        <div class="partners-slider">
-                            <a href=""><img src="images/parceiros/baker.png" alt=""></a>
-                            <a href=""><img src="images/parceiros/bumiarmada.png" alt=""></a>
-                            <a href=""><img src="images/parceiros/ge.jpeg" alt=""  class="partner-image-big"></a>
-                            <a href=""><img src="images/parceiros/halliburton.png" alt=""></a>
-                            <a href=""><img src="images/parceiros/schlumberger.png" alt=""></a>
-                            <a href=""><img src="images/parceiros/sonalgol.jpeg" alt="" class="partner-image-big"></a>
-                            <a href=""><img src="images/parceiros/weatherford.jpeg" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="min-screen-newsletter">
-                    <div>
-                        <h2>Assine a nossa Newsletter</h2>
-                        <form action="#">
-                            <input type="email" name="email" placeholder="anyone@domain.com">
-                            <input type="submit" value="Enviar">
-                        </form> 
-                    </div>
-                    <i class="fa-regular fa-paper-plane"></i>
+        <div class="hero-about">
+            <div class="hero-test-center">
+                <h1>SAIBA MAIS SOBRE NÓS</h1>
+            </div>
+            <div class="hero-black-bg"></div>
+            <div class="hero-bg">
+                <img src="https://blog.kaledo.com.br/wp-content/uploads/elementor/thumbs/Empresas-que-valorizam-seus-colaboradores-compressed-q06033h0sj4vvxi9pvhwryt2jlupgibc991rkve7fk.jpg">
+            </div>
+            
+        </div>
+        <div class="flex-div">
+            <div class="content">
+                <img src="https://cptstatic.s3.amazonaws.com/imagens/blogs/emprego-e-renda/materias/alicerces-da-empresa-emprego-e-renda.jpg">
+                <div class="about-text">
+                    <h1>Quem Somos?</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea aliquam nemo iusto hic unde consectetur quasi? Soluta, asperiores nam quidem ea repudiandae voluptate vitae tempora vero quis quasi explicabo illum?</p>
+                    <a href="" class="btn">Ver galeria</a>
                 </div>
             </div>
-        </section>
+        </div>
+        <?php
+            //FOOTER 
+            include('assets/min-screen-newsletter.php');
+        ?>
+        
     </main>
     <?php
         //FOOTER 

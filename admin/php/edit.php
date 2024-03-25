@@ -94,7 +94,9 @@
                                 <i class="icon fa-solid fa-calendar-minus"></i>
                             </div>
                             <div class="input-wrap">
-                                <input type="file" id="file-upload" class="input-file" name="imagem" value="<?php echo $row['produto_img'];?>"/>
+                                <input type="text" name="imagem" id="imgurl" autocomplete="off" required class="input-login" value="<?php echo $row['produto_img'];?>">
+                                <label for="imgurl">URL - Imagem do produto</label>
+                                <i class="icon fa-solid fa-calendar-minus"></i>
                             </div>
                             <div class="inline-input-wrap">
                                 <div class="input-wrap">

@@ -57,7 +57,7 @@
                     <td>
                         <div class="img-perfil">
                             <img class="produto-img" src="../<?php echo $row["produto_img"]; ?>">
-                            <p><?php echo $row["category_name"]; ?></p>
+                            <p><?php echo $row["produto_name"]; ?></p>
                         </div>
                     </td>
                     <td><?php echo $row["category_name"]; ?></td>

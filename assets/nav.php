@@ -36,10 +36,10 @@
             if (isset($_SESSION['username'])) {
                 echo '<li><a href=""><i class="fa-solid fa-user"></i> Minha conta</a></li>';
                 $userId = ($_SESSION['id']);
-                $sql_count = "SELECT COUNT(*) AS total_registros FROM tb_carrinho where id_user = '$userId'";
+                $sql_count = "SELECT COUNT(*) AS total_registros FROM tb_carrinho where id_user = '$userId'  and encomenda_status = '1'";
             } else {
                 echo '<li><a href="login.php">Fazer Login <i class="fa-solid fa-user"></i></a></li>';
-                $sql_count = "SELECT COUNT(*) AS total_registros FROM tb_carrinho where id_user = '0'";
+                $sql_count = "SELECT COUNT(*) AS total_registros FROM tb_carrinho where id_user = '0'  and encomenda_status = '1'";
             }
         ?>
         <li><span>|</span></li>
@@ -61,7 +61,49 @@
         ?>
     
     </ul>
-    <ul class="menutoggle">
+    <ul class="menutoggle" onclick="toggleActiveClass(this)">
         <i class="fa-solid fa-bars"></i>
     </ul>
+    <ul class="side-bar-menu">
+        <li><a onclick="removeActiveClass()">x</a></li>
+        <li><a href="home.php" class="active">Home</a></li>
+        <li><a href="sobre-nos.php">Sobre nós</a></li>
+        <li><a href="contacte-nos.php">Contacte-nos</a></li>
+        <?php    
+            if (isset($_SESSION['username'])) {
+                echo '<li><a href="">Minha conta</a></li>';
+                $userId = ($_SESSION['id']);
+                $sql_count = "SELECT COUNT(*) AS total_registros FROM tb_carrinho where id_user = '$userId' and encomenda_status = '1'";
+            } else {
+                echo '<li><a href="login.php">Fazer Login</a></li>';
+                $sql_count = "SELECT COUNT(*) AS total_registros FROM tb_carrinho where id_user = '0' and encomenda_status = '1'";
+            }
+        ?>
+        <?php
+            require_once('config.php');
+
+            
+            $result = $conn->query($sql_count);
+
+            if ($result) {
+                $row = $result->fetch_assoc();
+                $total_registros = $row['total_registros'];
+            } 
+            if (isset($_SESSION['username'])) {
+                echo '<li><a href="carrinho.php">Carrinho ('.$total_registros.')</a></li>';
+            } else {
+                echo '<li><a href="login.php">Carrinho (0)</a></li>';
+            }
+        ?>
+    
+    </ul>
+    <script>
+        function toggleActiveClass(element) {
+            element.classList.toggle('active');
+        }
+        function removeActiveClass() {
+            var menuToggle = document.querySelector('.menutoggle');
+            menuToggle.classList.remove('active');
+        }
+    </script>
 </nav>
