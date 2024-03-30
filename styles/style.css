@@ -2178,6 +2178,10 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
  /*===============================================================*/
  /*===============================================================*/
  /*===============================================================*/
+.about-main {
+    gap: 0;
+}
+
 .hero-about {
     height: 15rem;
     width: 100%;
@@ -2214,33 +2218,172 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
     transform: translatey(-50%);
 }
 
-.flex-div {
+/*End of about us hero*/
+/*End of about us hero*/
+
+/*Estilização das Sections do About*/
+/*Estilização das Sections do About*/
+
+.about-section {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 40px 20px;
+    width: 100%;
 }
 
-.flex-div .content{
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: center;
-    max-width: 60rem;
+.about-section.section-gray-bg {
+    background: var(--color-gray6);
 }
 
-.flex-div .content .about-text h1{
+.about-section.section-sec-bg {
+    background: var(--color-secundary1);
+}
+
+.about-section.section-white-bg {
+    background: var(--color-white);
+}
+
+
+/*Content com texto simples centralizado*/
+.about-section .content.text-center{
+    text-align: center;
+    max-width: 65rem;
+}
+
+.about-section .content.text-center h1{
+    font-size: 3em;
+    font-weight: 600;
     color: var(--color-secundary1);
-    font-size: 2.5em;
+    padding-bottom: 20px;
+}
+
+.about-section .content.text-center p{
+    font-size: 1.3em;
+    font-weight: 300;
+    color: var(--color-gray2);
+}
+
+.about-section .content.text-center{
+    text-align: center;
+    max-width: 65rem;
+}
+
+/*Content de newsletter com 2 elementos e display flex*/
+.about-section .flex2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-section .flex2 .left{
+    max-width: 30rem;
+}
+
+.about-section .flex2 .left h1 {
+    font-size: 1.6em;
+    font-weight: 400;
+    color: var(--color-gray6);
+}
+
+.about-section .flex2 .texto h1 {
+    font-size: 1.6em;
+    font-weight: 400;
+    color: var(--color-gray6);
+}
+
+.about-section .flex2 .right {
+    max-width: 30rem;
+}
+
+
+.about-section .flex2 .right form label{
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--color-gray6);
+}
+
+.about-section .flex2 .right form .input-wrap{
+    padding-top: 10px;
+}
+
+.about-section .flex2 .right form .input-wrap input[type=email]{
+    padding: 7px 13px;
+    width: 15rem;
+}
+
+.about-section .flex2 .right form .input-wrap input[type=submit]{
+    padding: 7px 13px;
+    background: var(--color-secundary);
+    color: var(--color-gray6);
+    cursor: pointer;
+}
+
+
+
+.about-section .flex2 .texto h1{
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1.3em;
+    color: var(--color-gray6);
+}
+
+.about-section .flex2 .logos-box {
+    width: 35rem;
+    padding: 2rem;
+    background: var(--color-white);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px 10px;
+}
+
+.about-section .flex2 .logos-box img{
+    width: 8rem;
+}
+
+.about-section .flex2 .logos-box img.logo-grande{
+    width: auto;
+    height: 3rem;
+}
+
+/*Content de display flex com 3 elementos*/
+/*Content de display flex com 3 elementos*/
+/*Content de display flex com 3 elementos*/
+
+.about-section .flex3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem 10rem;
+    align-items: center;
+    width: 100%;
+}
+.about-section .flex3 .flex-item{
+    width: 18rem;
+    text-align: center;
+}
+
+.about-section .flex3 .flex-item i{
+    color: var(--color-primary);
+    font-size: 5rem;
     padding-bottom: 10px;
 }
 
-.flex-div .content .about-text p{
+.about-section .flex3 .flex-item h3{
     color: var(--color-secundary1);
-    font-size: 1.3em;
-    line-height: 1.7em;
-    padding-bottom: 20px;
-
+    font-size: 2.5em;
+    padding-bottom: 5px;
 }
+
+.about-section .flex3 .flex-item p{
+    color: var(--color-gray3);
+    font-size: 1.1em;
+}
+
 
  /*===============================================================*/
  /*===============================================================*/
@@ -2572,6 +2715,20 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
         margin-top: 0px;
     }
 
+    /*Parceiros Caixa de logos*/
+    
+    .about-section .content.text-center p{
+        text-align: left;
+    }
+
+    .about-section .flex2 {
+        justify-content: left;
+    }
+
+    .about-section .flex2 .logos-box {
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
 @media (max-width: 459px){
@@ -2692,6 +2849,17 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
         content: " ";
         width: 0;
     }
+
+    /*Parceiros caixa de logos*/
+    
+    .about-section .flex2 .logos-box img{
+        width: 6rem;
+    }
+
+    .about-section .flex2 .logos-box img.logo-grande{
+        height: 2.5rem;
+    }
+
 }
 
 

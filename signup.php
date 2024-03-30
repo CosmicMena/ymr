@@ -130,7 +130,7 @@
             }
         } else {
 
-        ?>
+    ?>
     <div class="login-page">
         <div class="login-container">
             <div class="left-login-container">

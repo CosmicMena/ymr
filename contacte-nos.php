@@ -41,10 +41,10 @@ include("config.php");
                     <div class="produtos-header">
                         <h1><a href="home.php">home</a> > Contacte-nos</h1>
                     </div>
-                    <div class="about-hero">
+                    <!--<div class="about-hero">
                         <img src="images/about-hero.jpeg" alt="">
                         <h1>Deixe uma mensagem</h1>
-                    </div>
+                    </div>-->
                     <?php
                         include('assets/contact.php');
                     ?>
