@@ -262,14 +262,28 @@ nav .side-bar-menu li{
     width: 100%;
 }
 
-nav .side-bar-menu li:first-child{
-    text-align: right;
+nav .side-bar-menu li.flexli{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav .side-bar-menu li:first-child a{
-    text-align: right;
+nav .side-bar-menu li.flexli a{
+    width: auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
     background-color: var(--color-gray6);
-    font-size: 22px;
+}
+
+nav .side-bar-menu li.flexli img{
+    width: 150px;
+}
+
+nav .side-bar-menu li:first-child{
+    text-align: right;
 }
 
 nav .side-bar-menu li a{
@@ -731,13 +745,13 @@ aside .aside-box span a{
 {
     max-width: 100%;
 }
-.contact_s .content .texto form .input-wrap 
+.input-wrap 
 {
     position: relative;
     margin: 22px 0;
 }
 
-.contact_s .content .texto form .input-wrap .input-contact
+.input-wrap .input-contact
 {
     width: 100%;
     background: var(--color-gray6);
@@ -750,13 +764,13 @@ aside .aside-box span a{
     transition: 0.2s;
 }
 
-.contact_s .content .texto form .input-wrap .input-contact:focus
+.input-wrap .input-contact:focus
 {
     border: 1px solid var(--color-variation1);
     transition: 0.2s;
 }
 
-.contact_s .content .texto form .input-wrap label
+.input-wrap label
 {
     position: absolute;
     top: 50%;
@@ -767,15 +781,15 @@ aside .aside-box span a{
     color: var(--color-gray1);
 }
 
-.contact_s .content .texto form .input-wrap .input-contact:focus ~ label,
-.contact_s .content .texto form .input-wrap .input-contact:valid ~ label
+.input-wrap .input-contact:focus ~ label,
+.input-wrap .input-contact:valid ~ label
 {
     top: 27%;
     font-size: 11px;
     transition: 0.5s;
 }
 
-.contact_s .content .texto form .input-wrap .icon
+.input-wrap .icon
 {
     position: absolute;
     top: 50%;
@@ -787,7 +801,7 @@ aside .aside-box span a{
 }
 
 
-.contact_s .content .texto form .input-wrap .ic3
+.input-wrap .ic3
 {
     width: 100%;
     resize: none;
@@ -795,19 +809,19 @@ aside .aside-box span a{
 }
 
 
-.contact_s .content .texto form .input-wrap .ic3:focus ~ label,
-.contact_s .content .texto form .input-wrap .ic3:valid ~ label
+.input-wrap .ic3:focus ~ label,
+.input-wrap .ic3:valid ~ label
 {
     top: 0.7rem;
 }
 
-.contact_s .content .texto form .input-wrap .ic3 ~ label
+.input-wrap .ic3 ~ label
 {
     top: 1.5rem;
     transform: none;
 }
 
-.contact_s .content .texto form .input-wrap .ic3 ~ .icon
+.input-wrap .ic3 ~ .icon
 {
     top: 1.5rem;
     transform: none;
@@ -820,7 +834,7 @@ aside .aside-box span a{
     color: var(--color-secundary1);
 }
 
-.contact_s .content .texto form .input-wrap-enviar{
+.input-wrap-enviar{
     width: 100%;
     display: flex;
     align-items: center;
@@ -1827,6 +1841,7 @@ table .img-td img {
     justify-content: center;
     align-items: center;
     background-color: rgba(253, 253, 253, 0.05);
+    z-index: 1000;
 }
 
 .message-sec .message{
@@ -1836,7 +1851,7 @@ table .img-td img {
     background-color: var(--color-white);
     color: var(--color-gray2);
     font-size: 16px;
-    z-index: 100;
+    z-index: 1000;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -1946,7 +1961,7 @@ table .img-td img {
     margin: 22px 0;
 }
 
-.login-page .login-container .left-login-container form .input-wrap .input-login
+.input-login
 {
     width: 100%;
     background: var(--color-gray6);
@@ -1960,13 +1975,13 @@ table .img-td img {
     transition: 0.2s;
 }
 
-.login-page .login-container .left-login-container form .input-wrap .input-login:focus
+.input-login:focus
 {
     border: 1px solid var(--color-primary);
     transition: 0.2s;
 }
 
-.login-page .login-container .left-login-container form .input-wrap label
+label
 {
     position: absolute;
     top: 50%;
@@ -1977,8 +1992,8 @@ table .img-td img {
     color: var(--color-text);
 }
 
-.login-page .login-container .left-login-container form .input-wrap .input-login:focus ~ label,
-.login-page .login-container .left-login-container form .input-wrap .input-login:valid ~ label
+.input-login:focus ~ label,
+.input-login:valid ~ label
 {
     top: 27%;
     font-size: 11px;
@@ -1986,7 +2001,7 @@ table .img-td img {
     color: var(--color-primary);
 }
 
-.login-page .login-container .left-login-container form .input-wrap .icon
+.icon
 {
     position: absolute;
     top: 50%;
@@ -1996,13 +2011,13 @@ table .img-td img {
     cursor: pointer;
 }
 
-.login-page .login-container .left-login-container form .input-wrap .input-login:focus ~ .icon
+.input-login:focus ~ .icon
 {
     transition: 0.5s;
     color: var(--color-primary);
 }
 
-.login-page .login-container .left-login-container form .input-wrap .ic3
+.ic3
 {
     width: 100%;
     resize: none;
@@ -2010,19 +2025,19 @@ table .img-td img {
 }
 
 
-.login-page .login-container .left-login-container form .input-wrap .ic3:focus ~ label,
-.login-page .login-container .left-login-container form .input-wrap .ic3:valid ~ label
+.ic3:focus ~ label,
+.ic3:valid ~ label
 {
     top: 0.7rem;
 }
 
-.login-page .login-container .left-login-container form .input-wrap .ic3 ~ label
+.ic3 ~ label
 {
     top: 1.5rem;
     transform: none;
 }
 
-.login-page .login-container .left-login-container form .input-wrap .ic3 ~ .icon
+.ic3 ~ .icon
 {
     top: 1.5rem;
     transform: none;
@@ -2387,6 +2402,241 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
 
  /*===============================================================*/
  /*===============================================================*/
+ /*===============================================================*/
+ /*===============================================================*/
+/*message-sec*/
+ /*===============================================================*/
+ /*===============================================================*/
+ /*=========================== PERFIL ===========================?*/
+ /*===============================================================*/
+ /*===============================================================*/
+
+.profile-main {
+    width: 100%;
+    min-height: 80vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-profile {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.content-profile>div{
+    padding: 2rem;
+}
+
+.content-profile .profile-options{
+    background: var(--color-secundary1);
+    padding: 2rem 3rem;
+}
+
+.content-profile .profile-options .userprofile {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-profile .profile-options .userprofile .profile-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.content-profile .profile-options .userprofile .profile-image::before{
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-success);
+    border: 2px solid var(--color-secundary1);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.content-profile .profile-options .userprofile .profile-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.content-profile .profile-options .userprofile .profile-text h3{
+    color: var(--color-gray6);
+    font-size: 1.4em;
+    font-weight: 700;
+    text-align: center;
+    max-width: 10rem;
+}
+
+.content-profile .profile-options .userprofile .profile-text span{
+    color: var(--color-primary);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.content-profile .profile-options ul{
+    list-style: none;
+    padding: 10px 0;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+a.incative {
+    color: var(--color-gray5);
+}
+
+.content-profile .profile-options li{
+    color: var(--color-gray4);
+    padding: 5px;
+}
+
+.content-profile .profile-options li span{
+    color: var(--color-gray5);
+}
+
+.content-profile .profile-options li a{
+    color: var(--color-secundary);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.content-profile .profile-options li a i{
+    color: var(--color-gray6);
+    font-size: 14px;
+    padding-right: 5px;
+}
+
+.profile-info {
+    min-width: 40rem;
+    background: var(--color-gray6);
+}
+
+.profile-info h2{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: 800;
+    font-size: 2em;
+    color: var(--color-secundary);
+}
+
+.profile-info span{
+    color: var(--color-gray3);
+}
+
+.profile-info form{
+    width: 100%;
+}
+
+.profile-info form .double-input{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 0;
+}
+
+.profile-info form .double-input .input-wrap{
+    margin-bottom: 0;
+}
+
+
+
+.profile-info form .input-wrap {
+    width: 100%;
+}
+
+
+.profile-info form .input-login
+{
+    width: 100%;
+    background: var(--color-white);
+    border: 1px solid var(--color-neutral-2);
+    padding: 1.5rem 1.35rem calc(0.75rem - 2px) 1.35rem;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.profile-info form label.labelatc
+{
+    top: 27%;
+    font-size: 11px;
+    transition: 0.5s;
+    color: var(--color-secundary1);
+}
+
+.input-wrap-enviar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.profile-info form .input-wrap-enviar input{
+    padding: 10px;
+    color: var(--color-gray6);
+    background-color: var(--color-secundary);
+    width: 190px;
+    margin-right: 20px;
+    outline: none;
+    border: 1px solid var(--color-secundary);
+}
+
+.profile-info form .input-wrap-enviar input:hover{
+    color: var(--color-secundary1);
+    background-color: var(--color-white);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/*
+
+
+                    <div class="input-wrap">
+                        <input type="email" name="email" id="email" autocomplete="off" required class="input-login">
+                        <label for="email">E-mail</label>
+                        <i class="icon fas fa-envelope"></i>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" name="tel" id="tel" autocomplete="off" required class="input-login">
+                        <label for="tel">Telefone</label>
+                        <i class="icon fas fa-envelope"></i>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="email" name="email" id="email" autocomplete="off" required class="input-login">
+                        <label for="email">País</label>
+                        <i class="icon fas fa-envelope"></i>
+                    </div>
+                    <div class="input-wrap">
+                        <select name="canal" autocomplete="off" class="input-login">
+                            <option value="email">Forma de Comunicação preferido</option>
+                            <option value="whatsapp">Whatsapp</option>
+                            <option value="email">E-mail</option>
+                        </select>
+                    </div>
+                    <span class="a-span">Já tem uma conta? <a href="login.php">Faça Login</a></span>
+                    <div class="input-wrap-enviar">
+                        <input type="submit" value="Criar Conta" name="Enviar">
+                    </div>
+                </form>
+            </div>
+
+*/
+ /*===============================================================*/
+ /*===============================================================*/
+ /*=========================== PERFIL ===========================?*/
  /*===============================================================*/
  /*===============================================================*/
 
@@ -2754,10 +3004,25 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
     /* ====== Card das categorias =======*/
     /* ====== Card das categorias =======*/
     
-    .produtos .produtos-body{
-        grid-template-columns: 1fr;
+    .produtos .produtos-body .produtos-item {
+        width: 150px;
     }
 
+    .produtos-item .produto-item-img {
+        height: 150px;
+    }
+
+    .produtos-item .produto-item-img .produto-item-img-actions a.prod-btn{
+        width: 40px;
+    }
+
+    .produtos .produtos-body {
+        gap: 10px 0;
+    }
+
+    /* ========== Card de produstos ========== */
+    /* ========== Card de produstos ========== */
+    /* ========== Card de produstos ========== */
     .categorias .catg-card {
         height: 10rem;
     }
@@ -2881,4 +3146,4 @@ body main .contact_s .content .mais .localizacao .contact-icons a:hover{
     }   
 }
 
-/*produto-desc  produtos .produtos-header h1 a  .produto{  login-page logo-area .faqs-section .btn .input-contact .faqs-section .content .faq .faq-p .btn */
+/*produto-desc  produtos .produtos-header h1 a  .produto{  login-page logo-area .faqs-section .btn .input-contact .faqs-section .content .faq .faq-p .btn side-bar*/

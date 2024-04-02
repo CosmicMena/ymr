@@ -58,6 +58,7 @@
             mysqli_query($conn, $atualizarData);
             
             header("location: home.php");
+            header('location: home.php');
 
           } else {
             echo " 

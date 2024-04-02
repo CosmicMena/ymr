@@ -4,10 +4,10 @@
         <div class="links">
             <h3>Principais links</h3>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">categorias</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Fale com a Gente</a></li>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="home.php#categoriasid">categorias</a></li>
+                <li><a href="sobre-nos.php">Sobre Nós</a></li>
+                <li><a href="contacte-nos.php">Fale com a Gente</a></li>
                 <?php
                     if (isset($_SESSION['username'])) {
                         echo '<li><a href="login.php">Minha conta</a></li>';
@@ -21,13 +21,13 @@
         <div class="links">
             <h3>Opções de usuário</h3>
             <ul>
-                <li><a href="#">Meu Carrinho</a></li>
                 <li><a href="#">Acompanhe o seu pedido</a></li>
-                <li><a href="#">Suporte de usuário</a></li>
                 <?php
                     if (isset($_SESSION['username'])) {
-                        echo '<li><a href="login.php">Minha conta</a></li>';
-                        echo '<li><a href="#">Informações de usuário</a></li>';
+                        echo '<li><a href="carrinho.php">Meu Carrinho</a></li>';
+                        echo '<li><a href="contacte-nos.php">Suporte de usuário</a></li>';
+                        echo '<li><a href="perfil.php">Minha conta</a></li>';
+                        echo '<li><a href="perfil.php">Informações de usuário</a></li>';
                         
                         $userrule = ($_SESSION['id_rule']);
                         if ($userrule == 2) {
@@ -44,6 +44,10 @@
                                     }
                                 </style>';
                         }
+                    } else {
+                        echo '<li><a href="login.php">Meu Carrinho</a></li>';
+                        echo '<li><a href="login.php">Fazer Login</a></li>';
+                        echo '<li><a href="signup.php">Cadastre-se</a></li>';
                     }
                 ?>
             </ul>
@@ -51,13 +55,12 @@
         <div class="links">
             <h3>Sobre da Empresa</h3>
             <ul>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Preços</a></li>
-                <li><a href="#">Promoções</a></li>
-                <li><a href="#">Contacte-nos</a></li>
-                <li><a href="#">Onde nos encontrar?</a></li>
-                <li><a href="#">Sobre Nós</a>
-                <li><a href="#">Por que nos escolher?</a></li>
+                <li><a href="sobre-nos.php">Serviços</a></li>
+                <li><a href="home.php#newsletterid">Promoções</a></li>
+                <li><a href="contacte-nos.php">Contacte-nos</a></li>
+                <li><a href="contacte-nos.php">Onde nos encontrar?</a></li>
+                <li><a href="sobre-nos.php">Sobre Nós</a>
+                <li><a href="#sobre-nos.php">Por que nos escolher?</a></li>
             </ul>
         </div>
         <div class="contacte-nos">
@@ -70,17 +73,17 @@
                 </li>
                 <li>
                     <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-                    <p><a href="tel:924178899">(+244) 997 133 553</a>
-                    <br><a href="tel:93449244">(+244) 937 590 360</a>
-                    <br><strong><a href="tel:93449244">(+244) 222 719 152</a></strong></p>
+                    <p><a href="tel:997 133 553">(+244) 997 133 553</a>
+                    <br><a href="tel:937 590 360">(+244) 937 590 360</a>
+                    <br><strong><a href="tel:222 719 152">(+244) 222 719 152</a></strong></p>
                 </li>
                 <li>
                     <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                    <span><a href="mailto:negrista.contacto@gmail.com">comercial@ymrindustrial.com</a></span>
+                    <span><a href="mailto:comercial@ymrindustrial.com">comercial@ymrindustrial.com</a></span>
                 </li>
                 <li>
                     <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-                    <span><a href="mailto:negrista.contacto@gmail.com">ymr@ymrgroup.com</a></span>
+                    <span><a href="mailto:ymr@ymrgroup.com">ymr@ymrgroup.com</a></span>
                 </li>
             </ul>
             <div class="redes">

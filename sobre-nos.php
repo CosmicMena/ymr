@@ -25,7 +25,7 @@ include("config.php");
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-
+    <link rel="shortcut icon" href="images/svg.png" type="image/x-icon">
     <title>About YMR</title>
 </head>
 <body>
@@ -101,14 +101,14 @@ include("config.php");
                     <h1>Nossos <br>Parceiros</h1>
                 </div>
                 <div class="logos-box">
-                    <a href=""><img src="images/parceiros/baker.png"></a>
-                    <a href=""><img src="images/parceiros/halliburton.png"></a>
-                    <a href=""><img src="images/parceiros/siemens.png"></a>
-                    <a href=""><img src="images/parceiros/weatherford.png"></a>
-                    <a href=""><img src="images/parceiros/slb.png"></a>
-                    <a href=""><img src="images/parceiros/bumiarmada.png"></a>
-                    <a href=""><img src="images/parceiros/sonangol.png" class="logo-grande"></a>
-                    <a href=""><img src="images/parceiros/ge.png" class="logo-grande"></a>
+                    <a target="_blank" href="https://www.bakerhughes.com/"><img src="images/parceiros/baker.png"></a>
+                    <a target="_blank" href="https://www.halliburton.com/"><img src="images/parceiros/halliburton.png"></a>
+                    <a target="_blank" href="https://www.siemens.com/global/en.html"><img src="images/parceiros/siemens.png"></a>
+                    <a target="_blank" href="https://www.weatherford.com/"><img src="images/parceiros/weatherford.png"></a>
+                    <a target="_blank" href="https://www.slb.com/"><img src="images/parceiros/slb.png"></a>
+                    <a target="_blank" href="https://www.bumiarmada.com/"><img src="images/parceiros/bumiarmada.png"></a>
+                    <a target="_blank" href="https://www.sonangol.co.ao/"><img src="images/parceiros/sonangol.png" class="logo-grande"></a>
+                    <a target="_blank" href="https://www.ge.com/"><img src="images/parceiros/ge.png" class="logo-grande"></a>
                 </div>
             </div>
         </section>

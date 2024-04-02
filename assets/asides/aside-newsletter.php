@@ -9,7 +9,7 @@
                     echo $useremaillogado;
                 }
             ?>
-        ">
+        " id="newsletterid">
         <input type="submit" value="Assinar">
     </form>
 </div>

@@ -13,8 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
-
-    <title>Sign In YMR</title>
+    <link rel="shortcut icon" href="images/svg.png" type="image/x-icon">
+    <title>Sign Up YMR</title>
   </head>
   <body>
     <div class="login-page">

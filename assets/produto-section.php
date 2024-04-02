@@ -1,6 +1,6 @@
 <div class="produtos">
     <div class="produtos-header">
-    <h1><a href="home.php">Categorias</a> > <a href="produtos.php?categoria=<?php echo $categoria; ?>"><?php echo $categoria; ?></a></h1>
+    <h1 id="categoriasid"><a href="home.php">Categorias</a> > <a href="produtos.php?categoria=<?php echo $categoria; ?>"><?php echo $categoria; ?></a></h1>
     </div>
     <div class="produto-body">
         <div class="produto-body-header">

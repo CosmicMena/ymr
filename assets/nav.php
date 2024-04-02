@@ -17,7 +17,7 @@
         <li><a href="contacte-nos.php"><i class="fa-solid fa-location-dot"></i>Onde nos encontrar</a></li>
         <?php    
             if (isset($_SESSION['username'])) {
-                echo '<li><a href="logout.php">Logout</a></li>';
+                echo '<li><a href="logout.php"><i class="fa-solid fa-power-off"></i>Logout</a></li>';
             } else {
                 echo '<li><a href="login.php">Fazer Login <i class="fa-solid fa-user"></i></a></li>';
             }
@@ -34,7 +34,7 @@
         <li><a href="contacte-nos.php">Contacte-nos</a></li>
         <?php    
             if (isset($_SESSION['username'])) {
-                echo '<li><a href=""><i class="fa-solid fa-user"></i> Minha conta</a></li>';
+                echo '<li><a href="perfil.php"><i class="fa-solid fa-user"></i> Minha conta</a></li>';
                 $userId = ($_SESSION['id']);
                 $sql_count = "SELECT COUNT(*) AS total_registros FROM tb_carrinho where id_user = '$userId'  and encomenda_status = '1'";
             } else {
@@ -65,7 +65,15 @@
         <i class="fa-solid fa-bars"></i>
     </ul>
     <ul class="side-bar-menu">
-        <li><a onclick="removeActiveClass()">x</a></li>
+        
+        
+        <li class="flexli">
+            <div></div>
+            <a href="home.php" class="logo-area">
+                <img src="images/LOGO.png" alt="YMR Logo">
+            </a>
+            <a onclick="removeActiveClass()">x</a>
+        </li>
         <li><a href="home.php" class="active">Home</a></li>
         <li><a href="sobre-nos.php">Sobre nós</a></li>
         <li><a href="contacte-nos.php">Contacte-nos</a></li>

@@ -63,7 +63,7 @@ include("config.php");
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-
+    <link rel="shortcut icon" href="images/svg.png" type="image/x-icon">
     <title><?php echo $categoriaSelecionada; ?> - YMR Industrial</title>
 </head>
 <body>
