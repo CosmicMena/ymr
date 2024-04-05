@@ -105,7 +105,7 @@ if (isset($_POST['update'])){
                     ?>
             
                     <li><span><?php echo $total_registros3;?></span> compras confirmadas</li>
-                    <li><span><?php echo $total_registros;?></span> produtos no carinho</li>
+                    <li><span><?php echo $total_registros;?></span> produtos no carrinho</li>
                     <li><span><?php echo $total_registros2;?></span> pedidos pendentes</li>
                     <li>Último acesso em <span><?php echo date('d-m-Y', strtotime($row['acesso'])); ?></span></li>
                 </ul>
@@ -181,9 +181,9 @@ if (isset($_POST['update'])){
                         <i class="icon fa-brands fa-telegram"></i>
                     </div>
                     <div class="input-wrap">
-                        <input type="text" name="company" id="company" autocomplete="off" required class="input-login" value="<?php
+                        <input type="text" name="company" id="company" autocomplete="off" class="input-login" value="<?php
                         echo $row['company'];?>">
-                        <label for="company">Empresa</label>
+                        <label for="company">Empresa (Opcional)</label>
                         <i class=" icon fa-solid fa-building"></i>
                     </div>
                     <div class="input-wrap-enviar">

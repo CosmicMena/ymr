@@ -48,7 +48,7 @@ include("config.php");
             <div class="content text-center">
                 <h1>Quem Somos</h1>
                 <p>
-                    Agregando valores ao mercado consumidor, há uma década que entregamos à cada um dos nossos clientes a melhor qualidade de consumíveis, EPI's, peças de reposição, equipamentos de engenharia e muito mais. Graças ao compromisso com a inovação, expandimos, servindo hoje clientes que temos o orgulho de ter como parceiros assim como queremos ter consigo. 
+                    Nós defendemos e cultivamos a criatividade e um ambiente onde entendemos que a união tem uma força poderosa e nos conduz ao nosso principal objetivo, que é adicionar um valor considerável aos objetivos finais dos clientes.
                 </p>
             </div>
         </section>
@@ -73,17 +73,17 @@ include("config.php");
                 <div class="flex-item">
                     <i class="fa-solid fa-bullseye"></i>
                     <h3>Missão</h3>
-                    <p>Nossa missão é proporcionar soluções excepcionais que enriqueçam a vida de nossos clientes e comunidades.</p>
+                    <p>A missão tem sido fornecer serviços e produtos excepcionais de forma eficiente, sem comprometer sua integridade. Contamos exclusivamente com nossa capacidade de antecipar da melhor forma e resolver proativamente os PROBLEMAS de nossos clientes presentes e futuros.</p>
                 </div>
                 <div class="flex-item">
                     <i class="fa-regular fa-eye"></i>
                     <h3>Visão</h3>
-                    <p>Nossa visão é ser a primeira escolha de clientes que valorizam qualidade, integridade e comprometimento.</p>
+                    <p>YMR Comércio a Grosso & Prestação de Serviços foi criada com uma visão de ser um lugar onde jovens profissionais poderiam criar seu futuro e se tornar verdadeiros diferenciadores no mercado angolano, constantemente buscando maneiras de adicionar valor de forma intencional aos nossos clientes atuais e futuros.</p>
                 </div>
                 <div class="flex-item">
                 <i class="fa-regular fa-heart"></i>
                     <h3>Valores</h3>
-                    <p>A YMR é guiada por respeito mútuo, inovação, colaboração e responsabilidade. Princípios que orientam todas as nossas ações</p>
+                    <p>Os valores são centrados nos seguintes princípios: Integridade, responsabilidade, coragem e criatividade para uma entrega eficiente.</p>
                 </div>
             </div>
         </section>

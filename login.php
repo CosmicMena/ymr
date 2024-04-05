@@ -52,7 +52,7 @@
             $_SESSION['id_rule'] = $row['id_rule'];
 
 
-            $userId = $row['id'];
+            $userId = $row['id_user'];
             $dataAtual = date('Y-m-d');
             $atualizarData = "UPDATE users SET acesso = '$dataAtual' WHERE id = $userId";
             mysqli_query($conn, $atualizarData);
