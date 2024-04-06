@@ -54,11 +54,10 @@
 
             $userId = $row['id_user'];
             $dataAtual = date('Y-m-d');
-            $atualizarData = "UPDATE users SET acesso = '$dataAtual' WHERE id = $userId";
+            $atualizarData = "UPDATE users SET acesso = '$dataAtual' WHERE id_user = $userId";
             mysqli_query($conn, $atualizarData);
             
             header("location: home.php");
-            header('location: home.php');
 
           } else {
             echo " 
