@@ -72,7 +72,7 @@
             <td><?php echo $row["preco_produto"]; ?> kz</td>
             <td><?php echo $row["quantidade_produto"]; ?> unidade(s)</td>
             <td><?php echo $row["quantidade_produto"] * $row["preco_produto"]; ?>.00 Kz</td>
-            <td><?php echo $row["data_encomenda"]; ?>14-08-2023</td>
+            <td><?php echo $row["data_encomenda"]; ?></td>
             <td><?php 
                 if($row['encomenda_status'] == 2){
                     echo '<span class="status pending">Pendente</span>';

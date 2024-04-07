@@ -124,45 +124,12 @@ include("config.php");
                         <h3>FIltrar Resultados</h3>
                     </div>
                     <div class="aside-box-filter-body">
-                        <form action="$">
-                            <div class="input-box">
-                                <input type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar por Ferramentas">
-                                <i><label for="enviar"><i class="fa-solid fa-magnifying-glass"></i></label></i>
-                                <input type="hidden" name="enviar" id="enviar">
-                            </div>
-                            
-                            
-                            <label for="">Preço: </label>
-                            <select name="" id="">
-                                <option value="">0 - 1000</option>
-                                <option value="">1000 - 2000</option>
-                                <option value="">2000 - 3000</option>
-                                <option value="">3000 - 4000</option>
-                            </select>
-                            <input type="hidden" name="enviar">
-                        </form>
+                        <?php include('assets/asides/aside-pesquisar.php')?>
                     </div>
                     <div class="aside-box-filter-header">
                         <h3>Categorias</h3>
                     </div>
-                    <div class="aside-box-filter-body">
-                        <ul>
-                            <li><a href="#">Adhesives, Sealants & Tape</a></li>
-                            <li><a href="#">Paint, Equipment & Supplies</a></li>
-                            <li><a href="#">Safety Equipment</a></li>
-                            <li><a href="#">Material Handling</a></li>
-                            <li><a href="#" class="active">Test instruments</a></li>
-                            <li><a href="#">Lubrificants</a></li>
-                            <li><a href="#">Lighting</a></li>
-                            <li><a href="#">Tools</a></li>
-                            <li><a href="#">Security</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Pumps</a></li>
-                            <li><a href="#">Lab Supplies</a></li>
-                            <li><a href="#">Hydraulics</a></li>
-                            <li><a href="#">Fasteners</a></li>
-                        </ul>
-                    </div>
+                    <?php include("assets/asides/aside-categories.php");?>
                 </div>
             </aside>
         </section>

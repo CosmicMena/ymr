@@ -572,15 +572,16 @@ aside .aside-box span a{
     padding-bottom: 30px;
     border-bottom: 5px solid var(--color-secundary1);
     height: min-content;
+    padding-top: 20px;
 }
 
 .tipoProdutos .produto{
     display: grid;
     padding: 20px;
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.05);
     width: 200px;
     gap: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     position: relative;
     top: 0;
     transition: 0.3s;
@@ -630,7 +631,7 @@ aside .aside-box span a{
 
 
 .tipoProdutos .produto:hover{
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     top: -2px;
     cursor: pointer;
     transition: 0.3s;
@@ -656,7 +657,7 @@ aside .aside-box span a{
 
 .min-screen-newsletter {
     width: 100%;
-    background: var(--color-gray6);
+    background: var(--color-secundary1);
     border-top: 3px solid var(--color-primary);
     padding: 20px;
     display: grid;
@@ -666,22 +667,30 @@ aside .aside-box span a{
     display: none;
 }
 
-.min-screen-newsletter i {
-    font-size: 3em;
+
+.min-screen-newsletter .flex-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.min-screen-newsletter i.icon-plane{
+    font-size: 2.8em;
     color: var(--color-primary);
 }
 
 
 
 .min-screen-newsletter h2{
-    color: var(--color-secundary1);
-    font-size: 2em;
+    color: var(--color-gray6);
+    font-size: 1.7em;
 }
 
 .min-screen-newsletter form input{
     padding: 10px;
-    width: 15rem;
+    width: 13rem;
     border-bottom: 1px solid var(--color-primary);
+    background: var(--color-white);
 }
 .min-screen-newsletter form input[type=submit]{
     background: var(--color-primary);
@@ -986,8 +995,8 @@ aside .aside-box span a{
     justify-items: center;
     align-items: stretch;
     gap: 20px;
+    padding: 10px;
     padding-bottom: 30px;
-    padding-top: 20px;
     height: min-content;
 }
 
@@ -1415,8 +1424,9 @@ footer .about-us .mapa{
     padding: 10px 15px;
     color: var(--color-white);
     border-radius: 5px 5px 0 0;
-    font-size: 15px;
+    font-size: 13px;
     position: relative;
+    font-weight: 300;
 }
 
 .faqs-section .content .faq .faq-h1::before{
@@ -2805,6 +2815,11 @@ a.incative {
     }
     /*LOGIN CONTAINER*/
 
+    /*A categoria de carrinho aparece muito pequena em relação à tela*/
+    .produtos {
+        min-width: 50rem;
+    }
+
 }
 
 @media (max-width: 885px){
@@ -2833,6 +2848,69 @@ a.incative {
     .tipoProdutos {
         grid-template-columns: 1fr 1fr;
     }
+
+    
+    /*A categoria de carrinho aparece muito pequena em relação à tela*/
+    
+    .produto-body.produto-body-carrinho {
+        width: 100%;
+    }
+
+    .produtos {
+        min-width: 45rem;
+    }
+
+    /*===============================================================*/
+    /*===============================================================*/
+    /*=========================== PERFIL ===========================?*/
+    /*===============================================================*/
+    /*===============================================================*/
+
+    .content-profile {
+        flex-wrap: wrap;
+    }
+
+    .content-profile>div{
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .content-profile .profile-options{
+        background: var(--color-secundary1);
+        padding: 2rem 3rem;
+    }
+
+
+    .content-profile .profile-options .userprofile .profile-text h3{
+        max-width: 30rem;
+    }
+
+    .profile-info {
+        min-width: 20rem;
+    }
+
+    .profile-info h2{
+        padding: 20px 0;
+    }
+
+    .profile-info form .double-input{
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .profile-info form .input-wrap-enviar input{
+        background-color: var(--color-secundary1);
+        width: 100%;
+        margin-right: 0;
+        border: 1px solid var(--color-secundary1);
+    }
+
+    /*===============================================================*/
+    /*===============================================================*/
+    /*=========================== PERFIL ===========================?*/
+    /*===============================================================*/
+    /*===============================================================*/
+
 }
 
 @media (max-width: 755px){
@@ -2866,6 +2944,18 @@ a.incative {
     nav .logo-area img {
         width: 10rem;
     }
+
+    /*A categoria de carrinho aparece muito pequena em relação à tela*/
+    .produtos {
+        min-width: 32rem;
+    }
+        
+    .produto-body.produto-body-carrinho {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 @media (max-width: 500px){
@@ -2990,6 +3080,21 @@ a.incative {
         grid-template-columns: 1fr 1fr;
     }
 
+    /*Padding da tela de login*/
+
+    .login-page .login-container .left-login-container {
+        padding: 1rem;
+    }
+
+    /*A categoria de carrinho aparece muito pequena em relação à tela*/
+    .produtos {
+        min-width: 27rem;
+    }
+
+    /*Existe um gap entre ps elementos no main-section*/
+    main {
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 459px){
@@ -3067,6 +3172,10 @@ a.incative {
     .faqs-section .section-h1 h1 {
         font-size: 1.8em;
     }
+    /*A categoria de carrinho aparece muito pequena em relação à tela*/
+    .produtos {
+        min-width: 23rem;
+    }
 }
 
 @media (max-width: 601px){
@@ -3092,7 +3201,7 @@ a.incative {
     /*?????? TABELAS RESPONSIVAS ??????*/
 
     table {
-        max-width: 350px;
+        max-width: 450px;
     }
 
     th {
@@ -3157,4 +3266,4 @@ a.incative {
     }   
 }
 
-/*produto-desc  produtos .produtos-header h1 a  .produto{  login-page logo-area .faqs-section .btn .input-contact .faqs-section .content .faq .faq-p .btn side-bar*/
+/*produto-desc  produtos .produtos-header h1 a  .produto{  login-page logo-area .faqs-section .btn .input-contact .faqs-section .content .faq .faq-p .btn side-bar .tipoProdutos .produto  .min-screen-newsletter .produtos .produtos-body .faqs-section .content .faq .faq-h1 .produto-body.produto-body-carrinho produto-body-carrinho*/

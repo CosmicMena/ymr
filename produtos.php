@@ -77,7 +77,7 @@ include("config.php");
             <div class="main-sections">
                 <div class="produtos">
                     <div class="produtos-header">
-                        <h1><a href="home.php">Categorias</a> > <?php echo $categoriaSelecionada; ?></h1>
+                        <h1><a href="home.php">Categorias</a>> <?php echo $categoriaSelecionada; ?></h1>
                     </div>
                     <div class="produtos-body">
                     <?php
@@ -85,16 +85,7 @@ include("config.php");
                     ?>
                     </div>
                 </div>
-                <div class="min-screen-newsletter">
-                    <div>
-                        <h2>Assine a nossa Newsletter</h2>
-                        <form action="#">
-                            <input type="email" name="email" placeholder="anyone@domain.com">
-                            <input type="submit" value="Enviar">
-                        </form> 
-                    </div>
-                    <i class="fa-regular fa-paper-plane"></i>
-                </div>
+                <?php include("assets/min-screen-newsletter.php"); ?>
             </div>
             <aside>
                 <div class="aside-box-filter">

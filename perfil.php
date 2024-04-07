@@ -65,19 +65,19 @@ if (isset($_POST['update'])){
         <div class="content-profile">
             <div class="profile-options">
                 <div class="userprofile">
+                    <?php
+                        $result = mysqli_query($conn, $query);
+                        $row = mysqli_fetch_assoc($result);
+                    ?>
                     <div class="profile-image">
                         <img src="images/perfil.png">
                     </div>
                     <div class="profile-text">
-                        <h3>Nome de Usuário<br></h3>
-                        <span>username@gmail.com</span>
+                        <h3><?php  echo $row['username']; ?><br></h3>
+                        <span><?php  echo $row['email']; ?></span>
                     </div>
                 </div>
                 <ul class="profile-data">
-                    <?php
-                        $result = mysqli_query($conn, $query);
-                        $row = mysqli_fetch_assoc($result)
-                    ?>
                     <li>Conta Criada em <span><?php echo date('d-m-Y', strtotime($row['data_criacao'])); ?></span></li>
 
                     <?php

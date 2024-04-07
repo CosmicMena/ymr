@@ -79,7 +79,7 @@
         <li><a href="contacte-nos.php">Contacte-nos</a></li>
         <?php    
             if (isset($_SESSION['username'])) {
-                echo '<li><a href="">Minha conta</a></li>';
+                echo '<li><a href="perfil.php">Minha conta</a></li>';
                 $userId = ($_SESSION['id']);
                 $sql_count = "SELECT COUNT(*) AS total_registros FROM tb_carrinho where id_user = '$userId' and encomenda_status = '1'";
             } else {
