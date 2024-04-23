@@ -9,12 +9,15 @@
     c.data_encomenda,
     u.username,
     u.email,
+    u.canal,
+    u.telefone,
     c.encomenda_status
     FROM 
         tb_carrinho c
     JOIN 
         users u ON c.id_user = u.id_user
-    where encomenda_status > '1'";
+    where encomenda_status > '1'
+    ORDER BY id_carrinho DESC";
     $result_cart = $conn->query($sql_cart);
 ?>
     <section class="main-section" id="orders">
@@ -46,7 +49,7 @@
                 <thead>
                     <tr>
                         <th>Usuário</th>
-                        <th>E-mail</th>
+                        <th>E-mail/Whatsapp</th>
                         <th>Produto</th>
                         <th>Preço</th>
                         <th>Quantidade</th>
@@ -67,7 +70,12 @@
                     <p><?php echo $row["username"]; ?></p>
                 </div>
             </td>
-            <td><?php echo $row["email"]; ?></td>
+            <?php if ($row["canal"] == "whatsapp"){
+                echo '<td><a href="tel:'. $row["telefone"].'">'.$row["telefone"].'</a></td>';
+            } else {
+                echo '<td><a href="mailto:'. $row["email"].'">'. $row["email"] .'</a></td>';
+            }
+            ?>
             <td><?php echo $row["produto_name"]; ?></td>
             <td><?php echo $row["preco_produto"]; ?> kz</td>
             <td><?php echo $row["quantidade_produto"]; ?> unidade(s)</td>

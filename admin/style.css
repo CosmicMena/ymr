@@ -1237,3 +1237,31 @@ input[type="file"]::file-selector-button:hover {
     }
 
 }
+
+
+/*===================== body pop-up =========================*/
+/*===================== body pop-up =========================*/
+/*===================== body pop-up =========================*/
+/*===================== body pop-up =========================*/
+/*===================== body pop-up =========================*/
+
+.body-pop-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.body-pop-up .pop-up-status{
+    height: 10rem;
+    width: 15rem;
+    background: white;
+    border-radius: 10px;
+}

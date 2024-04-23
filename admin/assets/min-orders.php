@@ -16,8 +16,13 @@
         tb_carrinho c
     JOIN 
         users u ON c.id_user = u.id_user
-    where encomenda_status > '1'";
+    WHERE 
+        encomenda_status > '1'
+    ORDER BY id_carrinho DESC
+    LIMIT 3"; // Limita o resultado a 4 registros e os ordena em ordem decrescente pelo id_carrinho
     $result_cart_min = $conn->query($sql_cart_min);
+
+
 ?>
  
 
@@ -46,7 +51,7 @@
                     <img src="images/user.png">
                     <p><?php echo $row_cart_min["username"]; ?></p>
                 </td>
-                <td><?php echo $row_cart_min["data_encomenda"]; ?>14-08-2023</td>
+                <td><?php echo $row_cart_min["data_encomenda"]; ?></td>
                 <td><?php 
                 if($row_cart_min['encomenda_status'] == 2){
                     echo '<span class="status pending">Pendente</span>';

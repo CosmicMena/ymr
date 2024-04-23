@@ -354,5 +354,14 @@
 
     <script src="js/index.js"></script>
 </body>
+<div class="body-pop-up">
+   <div class="pop-up-status">
+        <p>Status da compra de Cliente</p>
+        <div class="flex-btns">
+            <a href="Confirmado">Confirmado</a>
+            <a href="Confirmado">Cancelado</a>
+        </div>
+    </div> 
+</div>
 
 </html>
